@@ -1,7 +1,8 @@
 # Deploys the site to GitHub Pages.
-# For every shops/<id>.json it generates s/<id>/index.html (a copy of
-# index.html with <base href="../../">), so /s/<id>/?table=3 answers 200
-# instead of going through 404.html. Adding a shop = adding its JSON.
+# .github/scripts/build_site.py generates s/<id>/index.html for every
+# shops/<id>.json (with <base href="../../"> and shop-specific og: tags),
+# so /s/<id>/?table=3 answers 200. Adding a shop = adding its JSON.
+# Invalid JSON stops the deploy; the live site stays as it was.
 name: Deploy Pages
 
 on:
@@ -24,27 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check shop and i18n JSON
-        run: |
-          for f in shops/*.json i18n/*.json; do
-            jq empty "$f" || { echo "::error file=$f::invalid JSON"; exit 1; }
-          done
+      - id: pages
+        uses: actions/configure-pages@v5
 
-      - name: Build _site with one folder per shop
-        run: |
-          mkdir _site
-          cp -r index.html 404.html .nojekyll assets i18n shops _site/
-          for f in shops/*.json; do
-            id="$(basename "$f" .json)"
-            if ! printf '%s' "$id" | grep -Eq '^[A-Za-z0-9_-]+$'; then
-              echo "::error file=$f::shop id must use only A-Z a-z 0-9 _ -"; exit 1
-            fi
-            mkdir -p "_site/s/$id"
-            sed 's#<head>#<head>\n<base href="../../">#' index.html > "_site/s/$id/index.html"
-            echo "built /s/$id/"
-          done
+      - name: Build _site with one page per shop
+        run: python3 .github/scripts/build_site.py "${{ steps.pages.outputs.base_url }}"
 
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
