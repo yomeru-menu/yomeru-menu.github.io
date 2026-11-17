@@ -1,0 +1,153 @@
+{
+  "id": "torinoya",
+  "name": { "ja": "とり乃屋 大名店", "ko": "토리노야 다이묘점", "en": "Torinoya Daimyo", "zh": "鸟乃屋 大名店" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": true, "price": 300 },
+    "cashOnly": false
+  },
+  "ownerPicks": ["momo-shio", "momo-aburi", "momo-miso"],
+  "categories": [
+    { "id": "grill", "ja": "炭火焼き", "ko": "숯불구이", "en": "Charcoal grill", "zh": "炭火烧烤" },
+    { "id": "side", "ja": "一品", "ko": "곁들임", "en": "Sides", "zh": "小菜" },
+    { "id": "meal", "ja": "お食事", "ko": "식사", "en": "Rice dishes", "zh": "主食" },
+    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品" }
+  ],
+  "items": [
+    {
+      "id": "momo-shio", "category": "grill", "price": 2500, "photo": null,
+      "name": { "ja": "もも塩焼き", "ko": "닭다리살 소금구이", "en": "Salt-grilled chicken thigh", "zh": "盐烤鸡腿肉" },
+      "desc": {
+        "ja": "宮崎県産の鶏ももを塩で炭火焼きにした看板メニュー。1皿約400g、シェアがおすすめ",
+        "ko": "미야자키산 닭다리살을 소금으로 숯불에 구운 간판 메뉴. 한 접시 약 400g이라 여럿이 나눠 먹기 좋아요",
+        "en": "The signature dish: Miyazaki chicken thigh grilled over charcoal with salt. About 400 g per plate, great for sharing",
+        "zh": "招牌菜：宫崎县产鸡腿肉撒盐炭火烤制。每盘约400克，适合多人分享"
+      }
+    },
+    {
+      "id": "momo-aburi", "category": "grill", "price": 1353, "photo": null,
+      "name": { "ja": "もも炙り", "ko": "닭다리살 아부리", "en": "Seared chicken thigh (aburi)", "zh": "炙烤鸡腿肉" },
+      "desc": {
+        "ja": "表面を炙り、鶏本来の味を楽しむ当店イチオシ。焼酎・日本酒・ワインに合います",
+        "ko": "겉면을 불에 살짝 그을려 닭 본연의 맛을 살린 가게 추천 메뉴. 일본 소주(쇼추)·사케·와인과 잘 어울려요",
+        "en": "The house favorite: seared on the outside to bring out the chicken's natural flavor. Goes well with shochu, sake or wine",
+        "zh": "本店首推：表面炙烤，品尝鸡肉本身的鲜味。适合搭配烧酒、日本酒或葡萄酒"
+      }
+    },
+    {
+      "id": "momo-miso", "category": "grill", "price": 1353, "photo": null,
+      "name": { "ja": "もも味噌焼き", "ko": "닭다리살 미소구이", "en": "Miso-grilled chicken thigh", "zh": "味噌烤鸡腿肉" },
+      "desc": {
+        "ja": "自家製の秘伝味噌で焼き上げた鶏もも",
+        "ko": "가게에서 직접 만든 비법 미소(일본 된장) 양념으로 구운 닭다리살",
+        "en": "Chicken thigh grilled with the house's own secret-recipe miso",
+        "zh": "用自制秘传味噌烤制的鸡腿肉"
+      }
+    },
+    {
+      "id": "teba", "category": "grill", "price": 1001, "photo": null,
+      "name": { "ja": "手羽炙り焼き（4本）", "ko": "닭날개 구이 (4개)", "en": "Grilled chicken wings (4 pcs)", "zh": "炙烤鸡翅（4只）" },
+      "desc": {
+        "ja": "手羽先を4本、香ばしく炙り焼きに",
+        "ko": "닭날개 4개를 불에 고소하게 구웠어요",
+        "en": "Four chicken wings, seared until fragrant",
+        "zh": "4只鸡翅，炙烤至焦香"
+      }
+    },
+    {
+      "id": "salad", "category": "side", "price": 650, "photo": null,
+      "name": { "ja": "サラダ", "ko": "샐러드", "en": "Salad", "zh": "沙拉" }
+    },
+    {
+      "id": "cabbage", "category": "side", "price": 400, "photo": null,
+      "name": { "ja": "キャベツ", "ko": "생양배추", "en": "Fresh cabbage", "zh": "生卷心菜" },
+      "desc": {
+        "ja": "焼き物と一緒にどうぞ",
+        "ko": "구이와 함께 곁들여 드세요",
+        "en": "Raw cabbage to enjoy alongside the grilled dishes",
+        "zh": "适合搭配烤物一起吃"
+      }
+    },
+    {
+      "id": "cucumber", "category": "side", "price": 180, "photo": null,
+      "name": { "ja": "きゅうり", "ko": "오이", "en": "Cucumber", "zh": "黄瓜" }
+    },
+    {
+      "id": "onigiri", "category": "meal", "price": 400, "photo": null,
+      "name": { "ja": "おにぎり（2個）", "ko": "주먹밥 (2개)", "en": "Rice balls (2 pcs)", "zh": "饭团（2个）" }
+    },
+    {
+      "id": "chazuke", "category": "meal", "price": 650, "photo": null,
+      "name": { "ja": "お茶漬け", "ko": "오차즈케", "en": "Ochazuke", "zh": "茶泡饭" },
+      "desc": {
+        "ja": "ご飯にお茶をかけた、締めの一品",
+        "ko": "밥에 차를 부어 먹는 일본식 마무리 요리",
+        "en": "Rice with tea poured over it, a classic way to finish the meal",
+        "zh": "米饭浇上茶汤，日式收尾主食"
+      }
+    },
+    {
+      "id": "beer", "category": "drink", "price": 650, "photo": null,
+      "name": { "ja": "サントリー生ビール", "ko": "생맥주 (산토리)", "en": "Draft beer (Suntory)", "zh": "生啤酒（三得利）" }
+    },
+    {
+      "id": "highball", "category": "drink", "price": 650, "photo": null,
+      "name": { "ja": "ハイボール", "ko": "하이볼", "en": "Highball", "zh": "嗨棒" },
+      "desc": {
+        "ja": "ウイスキーのソーダ割り",
+        "ko": "위스키에 탄산수를 섞은 술",
+        "en": "Whisky and soda",
+        "zh": "威士忌兑苏打水"
+      }
+    },
+    {
+      "id": "chuhai", "category": "drink", "price": 650, "photo": null,
+      "name": { "ja": "チューハイ", "ko": "추하이", "en": "Chuhai", "zh": "酎嗨" },
+      "desc": {
+        "ja": "フルーツ味のサワー",
+        "ko": "과일 맛 소주 칵테일",
+        "en": "Fruit-flavored shochu sour",
+        "zh": "水果味烧酒沙瓦"
+      },
+      "options": [
+        { "id": "flavor", "ja": "味", "ko": "맛", "en": "Flavor", "zh": "口味",
+          "choices": [
+            { "ja": "ピーチ", "ko": "복숭아", "en": "Peach", "zh": "蜜桃" },
+            { "ja": "グレープフルーツ", "ko": "자몽", "en": "Grapefruit", "zh": "西柚" }
+          ] }
+      ]
+    },
+    {
+      "id": "umeshu", "category": "drink", "price": 600, "photo": null,
+      "name": { "ja": "梅酒", "ko": "매실주 (우메슈)", "en": "Plum wine (umeshu)", "zh": "梅酒" },
+      "options": [
+        { "id": "style", "ja": "飲み方", "ko": "마시는 방법", "en": "How to serve", "zh": "喝法",
+          "choices": [
+            { "ja": "ロック", "ko": "얼음 (온더록)", "en": "On the rocks", "zh": "加冰" },
+            { "ja": "水割り", "ko": "물 타서", "en": "With water", "zh": "兑水" },
+            { "ja": "ソーダ割り", "ko": "탄산수 타서", "en": "With soda", "zh": "兑苏打水" }
+          ] }
+      ]
+    },
+    {
+      "id": "shirokirishima", "category": "drink", "price": 550, "photo": null,
+      "name": { "ja": "白霧島（グラス）", "ko": "시로키리시마 (잔)", "en": "Shiro Kirishima (glass)", "zh": "白雾岛（杯）" },
+      "desc": {
+        "ja": "芋焼酎 20度",
+        "ko": "고구마로 만든 일본 소주(쇼추), 20도",
+        "en": "Sweet potato shochu, 20% ABV",
+        "zh": "红薯烧酒，20度"
+      }
+    },
+    {
+      "id": "oolong", "category": "drink", "price": 400, "photo": null,
+      "name": { "ja": "ウーロン茶", "ko": "우롱차", "en": "Oolong tea", "zh": "乌龙茶" },
+      "desc": { "ja": "ノンアルコール", "ko": "무알코올", "en": "Non-alcoholic", "zh": "无酒精" }
+    }
+  ]
+}
