@@ -40,7 +40,8 @@ jobs:
           python -m pip install --quiet pillow
 
       - name: Build _site with one page per shop
-        run: python .github/scripts/build_site.py "${{ steps.pages.outputs.base_url }}"
+        # Fixed public address (2026-11-17): og:url / og:image always use it.
+        run: python .github/scripts/build_site.py "https://yomeru-menu.com"
 
       - uses: actions/upload-pages-artifact@v3
         with:
