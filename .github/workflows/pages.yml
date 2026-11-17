@@ -1,0 +1,60 @@
+# Deploys the site to GitHub Pages.
+# For every shops/<id>.json it generates s/<id>/index.html (a copy of
+# index.html with <base href="../../">), so /s/<id>/?table=3 answers 200
+# instead of going through 404.html. Adding a shop = adding its JSON.
+name: Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check shop and i18n JSON
+        run: |
+          for f in shops/*.json i18n/*.json; do
+            jq empty "$f" || { echo "::error file=$f::invalid JSON"; exit 1; }
+          done
+
+      - name: Build _site with one folder per shop
+        run: |
+          mkdir _site
+          cp -r index.html 404.html .nojekyll assets i18n shops _site/
+          for f in shops/*.json; do
+            id="$(basename "$f" .json)"
+            if ! printf '%s' "$id" | grep -Eq '^[A-Za-z0-9_-]+$'; then
+              echo "::error file=$f::shop id must use only A-Z a-z 0-9 _ -"; exit 1
+            fi
+            mkdir -p "_site/s/$id"
+            sed 's#<head>#<head>\n<base href="../../">#' index.html > "_site/s/$id/index.html"
+            echo "built /s/$id/"
+          done
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

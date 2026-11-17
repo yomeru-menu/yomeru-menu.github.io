@@ -1,5 +1,6 @@
 /* Yomeru guest menu — static, no build step.
- * URL: ./?shop=<id>&table=<n>   (404.html maps /s/<id>/?table=n here)
+ * URL: /s/<id>/?table=<n>  (s/<id>/index.html is generated per shop by the
+ *      deploy workflow, with <base href="../../">), or ./?shop=<id>&table=<n>.
  * "table" is stored internally as "seat" so hotels/rooms can reuse it later.
  */
 (function () {
@@ -10,7 +11,8 @@
   const LANG_KEY = 'yomeru:lang';
 
   const params = new URLSearchParams(location.search);
-  const shopId = (params.get('shop') || 'sample').replace(/[^A-Za-z0-9_-]/g, '') || 'sample';
+  const pathShop = (location.pathname.match(/\/s\/([A-Za-z0-9_-]+)\/?(?:index\.html)?$/) || [])[1];
+  const shopId = (pathShop || params.get('shop') || 'sample').replace(/[^A-Za-z0-9_-]/g, '') || 'sample';
   let seatParam = params.get('table') || params.get('seat');
   if (seatParam && !/^[A-Za-z0-9-]{1,8}$/.test(seatParam)) seatParam = null;
   const STATE_KEY = 'yomeru:state:' + shopId;
