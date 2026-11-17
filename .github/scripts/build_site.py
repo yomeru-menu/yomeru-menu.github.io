@@ -82,11 +82,11 @@ def make_og_image(path, title_name, full_name, accent):
     d = ImageDraw.Draw(img)
     pad, max_w = 80, OG_W - 160
     d.rectangle([0, 0, OG_W, 18], fill=accent)
-    d.text((pad, 92), "Yomeru · ヨメル", font=font(34), fill=MUTED)
-    d.text((pad, 170), title_name, font=fit_font(d, title_name, max_w, 120, 56), fill=INK)
+    d.text((pad, 80), "Yomeru · ヨメル", font=font(34), fill=MUTED)
+    d.text((pad, 150), title_name, font=fit_font(d, title_name, max_w, 120, 56), fill=INK)
     if full_name != title_name:
-        d.text((pad, 318), full_name, font=fit_font(d, full_name, max_w, 40, 28), fill=MUTED)
-    d.text((pad, 390), "メニュー · Menu · 메뉴 · 菜单",
+        d.text((pad, 335), full_name, font=fit_font(d, full_name, max_w, 40, 28), fill=MUTED)
+    d.text((pad, 410), "メニュー · Menu · 메뉴 · 菜单",
            font=fit_font(d, "メニュー · Menu · 메뉴 · 菜单", max_w, 60, 36), fill=accent)
     d.text((pad, 530), "日本語 · English · 한국어 · 中文", font=font(32), fill=MUTED)
     img.save(path, "PNG", optimize=True)
