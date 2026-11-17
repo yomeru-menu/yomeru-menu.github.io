@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Yomeru Menu</title>
+<script>
+  // /s/<shop>/?table=3  →  /?shop=<shop>&table=3
+  // GitHub Pages serves this file for any unknown path, so a new shop
+  // only needs shops/<shop>.json — no per-shop folder.
+  (function () {
+    var m = location.pathname.match(/^(.*?)\/s\/([A-Za-z0-9_-]+)\/?(?:index\.html)?$/);
+    if (m) {
+      var q = new URLSearchParams(location.search);
+      q.set('shop', m[2]);
+      location.replace(m[1] + '/?' + q.toString() + location.hash);
+    }
+  })();
+</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F7F6F2; color: #1C2430;
+         font-family: "Noto Sans JP", system-ui, sans-serif; text-align: center; padding: 16px; }
+</style>
+</head>
+<body>
+  <p>ページが見つかりません · Page not found · 페이지를 찾을 수 없어요</p>
+</body>
+</html>

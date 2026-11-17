@@ -1,0 +1,12 @@
+# Public repo: only the website. Business files must never land here.
+*.xlsx
+*.xls
+*.csv
+*.md
+!README.md
+*.pdf
+*.docx
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
