@@ -1,12 +1,22 @@
 """Build _site for GitHub Pages.
 
-For every shops/<id>.json this writes s/<id>/index.html: a copy of index.html
-with <base href="../../">, a shop-specific <title>, and og:/description meta
-tags so link previews (LINE, Instagram, Google Maps menu link) show the shop
-name. /s/<id>/ then answers HTTP 200. Adding a shop = adding its JSON.
+For every shops/<id>.json this writes:
+  s/<id>/index.html  index.html + <base href="../../"> + shop title and
+                     og:title / og:description / og:image tags
+  s/<id>/og.png      1200x630 link-preview image with the shop name
+so /s/<id>/ answers HTTP 200 and shows a proper preview in LINE, Instagram,
+Google Maps menu links etc. Adding a shop = adding its JSON.
+
+Shop JSON fields used (all optional except name.ja):
+  name.ja / name.en        full name
+  shortName.ja             short name for titles (e.g. "とり乃屋"); falls back to name.ja
+  accent                   "#RRGGBB" colour for the image
+  ownerPicks + items       picks are listed in og:description
 
 Usage: python3 build_site.py [base_url]
+Needs Pillow and a Noto Sans CJK font (installed by the workflow).
 """
+import glob
 import html
 import json
 import re
@@ -14,10 +24,17 @@ import shutil
 import sys
 from pathlib import Path
 
+from PIL import Image, ImageDraw, ImageFont
+
 ROOT = Path(".")
 OUT = ROOT / "_site"
 BASE_URL = (sys.argv[1] if len(sys.argv) > 1 else "").rstrip("/")
 ID_RE = re.compile(r"[A-Za-z0-9_-]+")
+HEX_RE = re.compile(r"#[0-9A-Fa-f]{6}")
+
+TITLE_SUFFIX = "メニュー | Menu · 메뉴 · 菜单"
+OG_W, OG_H = 1200, 630
+BG, INK, MUTED, DEFAULT_ACCENT = "#F7F6F2", "#1C2430", "#5F6875", "#2B4C7E"
 
 
 def fail(path, msg):
@@ -33,7 +50,46 @@ def load_json(path):
 
 
 def attr(s):
-    return html.escape(s, quote=True)
+    return html.escape(str(s), quote=True)
+
+
+def find_font():
+    for pat in ("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+                "/usr/share/fonts/**/NotoSansCJK*-Bold.ttc",
+                "/usr/share/fonts/**/NotoSansCJK*.ttc"):
+        hits = sorted(glob.glob(pat, recursive=True))
+        if hits:
+            return hits[0]
+    fail("build_site.py", "Noto Sans CJK font not found (apt-get install fonts-noto-cjk)")
+
+
+FONT_PATH = find_font()
+
+
+def font(size):
+    return ImageFont.truetype(FONT_PATH, size, index=0)  # index 0 = JP
+
+
+def fit_font(draw, text, max_w, start, minimum):
+    size = start
+    while size > minimum and draw.textlength(text, font=font(size)) > max_w:
+        size -= 4
+    return font(size)
+
+
+def make_og_image(path, title_name, full_name, accent):
+    img = Image.new("RGB", (OG_W, OG_H), BG)
+    d = ImageDraw.Draw(img)
+    pad, max_w = 80, OG_W - 160
+    d.rectangle([0, 0, OG_W, 18], fill=accent)
+    d.text((pad, 92), "Yomeru · ヨメル", font=font(34), fill=MUTED)
+    d.text((pad, 170), title_name, font=fit_font(d, title_name, max_w, 120, 56), fill=INK)
+    if full_name != title_name:
+        d.text((pad, 318), full_name, font=fit_font(d, full_name, max_w, 40, 28), fill=MUTED)
+    d.text((pad, 390), "メニュー · Menu · 메뉴 · 菜单",
+           font=fit_font(d, "メニュー · Menu · 메뉴 · 菜单", max_w, 60, 36), fill=accent)
+    d.text((pad, 530), "日本語 · English · 한국어 · 中文", font=font(32), fill=MUTED)
+    img.save(path, "PNG", optimize=True)
 
 
 for f in sorted((ROOT / "i18n").glob("*.json")):
@@ -54,14 +110,29 @@ for f in sorted((ROOT / "shops").glob("*.json")):
         fail(f, "shop id (file name) must use only A-Z a-z 0-9 _ -")
     shop = load_json(f)
     names = shop.get("name") or {}
-    ja = names.get("ja")
-    if not ja:
-        fail(f, 'missing name.ja')
-    en = names.get("en") or ja
+    full_ja = names.get("ja")
+    if not full_ja:
+        fail(f, "missing name.ja")
+    full_en = names.get("en") or full_ja
+    short_ja = (shop.get("shortName") or {}).get("ja") or full_ja
+    accent = shop.get("accent") if HEX_RE.fullmatch(str(shop.get("accent", ""))) else DEFAULT_ACCENT
 
-    title = f"{ja} | メニュー · Menu · 메뉴 · 菜单"
-    desc = (f"{ja}のメニューを日本語・English・한국어・中文で。"
-            f"See the {en} menu in English, Korean and Chinese.")
+    items = {i.get("id"): i for i in shop.get("items", [])}
+    picks = [items[p]["name"]["ja"] for p in shop.get("ownerPicks", [])
+             if p in items and (items[p].get("name") or {}).get("ja")][:3]
+
+    title = f"{short_ja} {TITLE_SUFFIX}"
+    desc = f"{full_ja}のメニューを日本語・English・한국어・中文で見られます。"
+    if picks:
+        desc += "おすすめ：" + "・".join(picks) + "。"
+    desc += f" See the {full_en} menu in English, Korean and Chinese."
+
+    dest = OUT / "s" / sid
+    dest.mkdir(parents=True, exist_ok=True)
+    make_og_image(dest / "og.png", short_ja, full_ja, accent)
+
+    page_url = f"{BASE_URL}/s/{sid}/" if BASE_URL else ""
+    image_url = f"{page_url}og.png" if BASE_URL else "og.png"
     meta = [
         '<base href="../../">',
         f'<meta name="description" content="{attr(desc)}">',
@@ -69,15 +140,16 @@ for f in sorted((ROOT / "shops").glob("*.json")):
         '<meta property="og:site_name" content="Yomeru">',
         f'<meta property="og:title" content="{attr(title)}">',
         f'<meta property="og:description" content="{attr(desc)}">',
-        '<meta name="twitter:card" content="summary">',
+        f'<meta property="og:image" content="{attr(image_url)}">',
+        f'<meta property="og:image:width" content="{OG_W}">',
+        f'<meta property="og:image:height" content="{OG_H}">',
+        f'<meta property="og:image:alt" content="{attr(title)}">',
+        '<meta name="twitter:card" content="summary_large_image">',
     ]
-    if BASE_URL:
-        meta.append(f'<meta property="og:url" content="{attr(BASE_URL)}/s/{sid}/">')
+    if page_url:
+        meta.append(f'<meta property="og:url" content="{attr(page_url)}">')
 
     page = template.replace("<head>", "<head>\n" + "\n".join(meta), 1)
     page = re.sub(r"<title>.*?</title>", f"<title>{html.escape(title)}</title>", page, count=1)
-
-    dest = OUT / "s" / sid
-    dest.mkdir(parents=True, exist_ok=True)
     (dest / "index.html").write_text(page, encoding="utf-8")
-    print(f"built /s/{sid}/  ({ja})")
+    print(f"built /s/{sid}/  title={title!r}  picks={picks}")

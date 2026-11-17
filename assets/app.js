@@ -366,7 +366,8 @@
     else if (r.startsWith('call/')) html = viewCallShow(r.slice(5));
     else html = viewMenu();
     app.innerHTML = html;
-    document.title = shop ? `${L(shop.name)} · Yomeru` : 'Yomeru';
+    // Same format as the per-shop <title> made by .github/scripts/build_site.py
+    if (shop) document.title = `${(shop.shortName && shop.shortName.ja) || shop.name.ja} メニュー | Menu · 메뉴 · 菜单`;
   }
 
   /* ---------- events ---------- */

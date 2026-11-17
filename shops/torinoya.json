@@ -1,6 +1,7 @@
 {
   "id": "torinoya",
   "name": { "ja": "とり乃屋 大名店", "ko": "토리노야 다이묘점", "en": "Torinoya Daimyo", "zh": "鸟乃屋 大名店" },
+  "shortName": { "ja": "とり乃屋" },
   "country": "JP",
   "currency": "JPY",
   "businessType": "restaurant",

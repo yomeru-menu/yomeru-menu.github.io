@@ -1,6 +1,7 @@
 # Deploys the site to GitHub Pages.
-# .github/scripts/build_site.py generates s/<id>/index.html for every
-# shops/<id>.json (with <base href="../../"> and shop-specific og: tags),
+# .github/scripts/build_site.py generates s/<id>/index.html and s/<id>/og.png
+# for every shops/<id>.json (with <base href="../../">, a shop title and
+# og:title / og:description / og:image tags),
 # so /s/<id>/?table=3 answers 200. Adding a shop = adding its JSON.
 # Invalid JSON stops the deploy; the live site stays as it was.
 name: Deploy Pages
@@ -28,8 +29,18 @@ jobs:
       - id: pages
         uses: actions/configure-pages@v5
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow and Japanese/Korean/Chinese font (for og.png)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          python -m pip install --quiet pillow
+
       - name: Build _site with one page per shop
-        run: python3 .github/scripts/build_site.py "${{ steps.pages.outputs.base_url }}"
+        run: python .github/scripts/build_site.py "${{ steps.pages.outputs.base_url }}"
 
       - uses: actions/upload-pages-artifact@v3
         with:
