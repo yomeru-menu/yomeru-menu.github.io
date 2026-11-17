@@ -9,7 +9,7 @@
   "accent": "#2B4C7E",
   "seats": null,
   "notices": {
-    "otoshi": { "enabled": true, "price": 350 },
+    "otoshi": { "enabled": false, "price": 350 },
     "taxIncluded": true,
     "cashOnly": false
   },
