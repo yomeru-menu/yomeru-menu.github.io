@@ -533,7 +533,7 @@
   function start() {
     lang = detectLang();
     render();
-    requestAnimationFrame(() => setTimeout(loadFonts, 0));
+    setTimeout(loadFonts, 60); // after the first paint; a timer also works when the tab is in the background
   }
   function showError(err) {
     console.error(err);

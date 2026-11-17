@@ -19,6 +19,7 @@ Needs Pillow and a Noto Sans CJK font (installed by the workflow).
 import glob
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -103,6 +104,14 @@ for name in ["assets", "i18n", "shops"]:
     shutil.copytree(ROOT / name, OUT / name)
 
 template = (ROOT / "index.html").read_text(encoding="utf-8")
+# Version the CSS/JS addresses per deploy so a phone never mixes a new page
+# with an old cached script (GitHub Pages lets browsers cache for 10 minutes).
+VERSION = (os.environ.get("GITHUB_SHA") or "dev")[:8]
+for asset in ("assets/style.css", "assets/app.js"):
+    if f'{asset}"' not in template:
+        fail("index.html", f"expected a reference to {asset}")
+    template = template.replace(f'{asset}"', f'{asset}?v={VERSION}"')
+(OUT / "index.html").write_text(template, encoding="utf-8")
 
 for f in sorted((ROOT / "shops").glob("*.json")):
     sid = f.stem
