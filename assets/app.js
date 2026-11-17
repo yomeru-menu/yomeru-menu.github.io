@@ -225,7 +225,9 @@
       <div class="spacer"></div>
     </main>
     ${cartN ? `<div class="bottom"><div class="inner"><button class="primary" data-act="nav" data-to="cart">
-      ${icon('bag')}<span class="grow">${t('viewCart')} · ${t('items', { n: cartN })}</span><span>${price(sum(state.cart))}</span></button></div></div>` : ''}`;
+      ${icon('bag')}<span class="grow">${t('viewCart')} · ${t('items', { n: cartN })}</span><span>${price(sum(state.cart))}</span></button></div></div>`
+      : state.ordered.length ? `<div class="bottom"><div class="inner"><button class="primary ghost" data-act="nav" data-to="cart">
+      ${icon('receipt')}<span class="grow">${t('viewOrders')}</span><span>${t('grandTotal')} ${price(sum(state.ordered))}</span></button></div></div>` : ''}`;
   }
 
   function viewCart() {
