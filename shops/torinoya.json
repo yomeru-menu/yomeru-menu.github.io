@@ -25,10 +25,10 @@
       "id": "momo-shio", "category": "grill", "price": 2400, "photo": null,
       "name": { "ja": "もも塩焼き", "ko": "닭다리살 소금구이", "en": "Salt-grilled chicken thigh", "zh": "盐烤鸡腿肉", "zh-Hant": "鹽烤雞腿肉" },
       "desc": {
-        "ja": "鶏ももを塩で炭火焼きにした看板メニュー。約400g、シェアがおすすめ",
-        "ko": "닭다리살을 소금으로 숯불에 구운 간판 메뉴. 약 400g이라 여럿이 나눠 먹기 좋아요",
-        "en": "The signature dish: chicken thigh grilled over charcoal with salt. About 400 g, great for sharing",
-        "zh": "招牌菜：鸡腿肉撒盐炭火烤制。约400克，适合多人分享", "zh-Hant": "招牌菜：雞腿肉撒鹽以炭火燒烤。約400克，適合多人分享"
+        "ja": "鶏ももを塩で炭火焼きにしました。約400g",
+        "ko": "닭다리살을 소금으로 숯불에 구웠어요. 약 400g",
+        "en": "Chicken thigh grilled over charcoal with salt. About 400 g",
+        "zh": "鸡腿肉撒盐炭火烤制。约400克", "zh-Hant": "雞腿肉撒鹽以炭火燒烤。約400克"
       }
     },
     {
@@ -85,10 +85,10 @@
       "id": "cucumber", "category": "side", "price": 180, "photo": null,
       "name": { "ja": "きゅうり", "ko": "오이", "en": "Cucumber", "zh": "黄瓜", "zh-Hant": "小黃瓜" },
       "desc": {
-        "ja": "チャージでもお出ししている人気のきゅうり",
-        "ko": "자릿세(오토시)로도 나오는 인기 오이",
-        "en": "The popular cucumber also served as the table-charge starter",
-        "zh": "座位费小菜也会上的人气黄瓜", "zh-Hant": "座位費小菜也會上的人氣小黃瓜"
+        "ja": "人気のきゅうり",
+        "ko": "인기 오이",
+        "en": "A popular cucumber dish",
+        "zh": "人气黄瓜", "zh-Hant": "人氣小黃瓜"
       }
     },
     {
@@ -111,9 +111,9 @@
       "name": { "ja": "お茶漬け", "ko": "오차즈케", "en": "Ochazuke", "zh": "茶泡饭", "zh-Hant": "茶泡飯" },
       "desc": {
         "ja": "カツオ昆布だしの定番茶漬け",
-        "ko": "밥에 가다랑어·다시마 육수를 부어 먹는 마무리 요리",
-        "en": "Rice in bonito and kombu broth, a classic way to finish the meal",
-        "zh": "米饭浇上鲣鱼海带高汤，日式收尾主食", "zh-Hant": "白飯淋上鰹魚昆布高湯，日式收尾主食"
+        "ko": "가다랑어·다시마 육수를 부어 먹는 기본 오차즈케",
+        "en": "Classic ochazuke: rice with bonito and kombu broth",
+        "zh": "经典茶泡饭：米饭浇上鲣鱼海带高汤", "zh-Hant": "經典茶泡飯：白飯淋上鰹魚昆布高湯"
       }
     },
     {
@@ -135,9 +135,9 @@
       "name": { "ja": "レモンサワー", "ko": "레몬 사와", "en": "Lemon sour", "zh": "柠檬沙瓦", "zh-Hant": "檸檬沙瓦" },
       "desc": {
         "ja": "レモンのサワー",
-        "ko": "레몬 맛 소주 칵테일",
-        "en": "Lemon shochu highball",
-        "zh": "柠檬味烧酒气泡酒", "zh-Hant": "檸檬口味燒酎氣泡酒"
+        "ko": "레몬 맛 탄산 술",
+        "en": "Lemon-flavored fizzy alcoholic drink",
+        "zh": "柠檬味气泡酒", "zh-Hant": "檸檬口味氣泡酒"
       }
     },
     {
