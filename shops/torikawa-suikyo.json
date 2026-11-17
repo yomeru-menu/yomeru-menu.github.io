@@ -1,0 +1,106 @@
+{
+  "id": "torikawa-suikyo",
+  "name": { "ja": "とりかわ 粋恭", "ko": "토리카와 스이쿄", "en": "Torikawa Suikyo", "zh": "鸡皮 粹恭", "zh-Hant": "雞皮 粹恭" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": false, "price": 200 },
+    "taxIncluded": true
+  },
+  "ownerPicks": ["torikawa", "yamaimo", "tsukune"],
+  "categories": [
+    { "id": "kushi", "ja": "特撰", "ko": "꼬치", "en": "Skewers", "zh": "串烧", "zh-Hant": "串燒" },
+    { "id": "maki", "ja": "巻物", "ko": "말이 꼬치", "en": "Wrapped skewers", "zh": "卷串", "zh-Hant": "捲串" },
+    { "id": "yasai", "ja": "焼き野菜", "ko": "구운 채소", "en": "Grilled vegetables", "zh": "烤蔬菜", "zh-Hant": "烤蔬菜" },
+    { "id": "other", "ja": "その他", "ko": "그 밖의 메뉴", "en": "Other dishes", "zh": "其他", "zh-Hant": "其他" },
+    { "id": "starter", "ja": "とりあえず", "ko": "가벼운 안주", "en": "Starters", "zh": "开胃小菜", "zh-Hant": "開胃小菜" },
+    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品", "zh-Hant": "飲品" }
+  ],
+  "items": [
+    {
+      "id": "torikawa", "category": "kushi", "price": 220, "photo": null,
+      "name": { "ja": "とりかわ", "ko": "닭껍질 꼬치", "en": "Chicken skin skewer", "zh": "鸡皮串", "zh-Hant": "雞皮串" },
+      "desc": { "ja": "名物", "ko": "메뉴판에 '명물(名物)'로 표시된 메뉴", "en": "Marked as the house specialty (名物) on the menu", "zh": "菜单上标为“名物”", "zh-Hant": "菜單上標為「名物」" }
+    },
+    {
+      "id": "sunazuri", "category": "kushi", "price": 190, "photo": null,
+      "name": { "ja": "砂ズリ", "ko": "닭 모래집 꼬치", "en": "Chicken gizzard skewer", "zh": "鸡胗串", "zh-Hant": "雞胗串" }
+    },
+    {
+      "id": "seseri", "category": "kushi", "price": 190, "photo": null,
+      "name": { "ja": "せせり", "ko": "닭 목살 꼬치", "en": "Chicken neck skewer", "zh": "鸡颈肉串", "zh-Hant": "雞頸肉串" }
+    },
+    {
+      "id": "torimi", "category": "kushi", "price": 190, "photo": null,
+      "name": { "ja": "とり身", "ko": "닭고기 꼬치", "en": "Chicken meat skewer", "zh": "鸡肉串", "zh-Hant": "雞肉串" }
+    },
+    {
+      "id": "butabara", "category": "kushi", "price": 190, "photo": null,
+      "name": { "ja": "豚バラ", "ko": "삼겹살 꼬치", "en": "Pork belly skewer", "zh": "五花肉串", "zh-Hant": "五花肉串" }
+    },
+    {
+      "id": "sasami-shigi", "category": "kushi", "price": 350, "photo": null,
+      "name": { "ja": "笹身しぎ焼き", "ko": "닭 안심 시기야키", "en": "Chicken tenderloin shigi-yaki", "zh": "鸡里脊烧", "zh-Hant": "雞里肌燒" },
+      "desc": {
+        "ja": "レアでお出しします。体調に自信のない方・お子様にはよく焼いてお出ししますのでお申し付けください。",
+        "ko": "레어(속이 덜 익은 상태)로 나와요. 몸 상태가 걱정되는 분이나 어린이는 말씀하시면 잘 익혀 드려요.",
+        "en": "Served rare. If you are unwell or ordering for children, ask and it will be cooked through.",
+        "zh": "以半熟状态上桌。身体不适者或儿童请告知店员，可烤熟后上桌。",
+        "zh-Hant": "以半熟狀態上桌。身體不適者或兒童請告知店員，可烤熟後上桌。"
+      }
+    },
+    {
+      "id": "tomato-maki", "category": "maki", "price": 350, "photo": null,
+      "name": { "ja": "トマト巻き", "ko": "토마토 말이 꼬치", "en": "Tomato wrap skewer", "zh": "番茄卷串", "zh-Hant": "番茄捲串" }
+    },
+    {
+      "id": "creamcheese-maki", "category": "maki", "price": 350, "photo": null,
+      "name": { "ja": "クリームチーズ巻き", "ko": "크림치즈 말이 꼬치", "en": "Cream cheese wrap skewer", "zh": "奶油奶酪卷串", "zh-Hant": "奶油起司捲串" }
+    },
+    {
+      "id": "yamaimo", "category": "yasai", "price": 320, "photo": null,
+      "name": { "ja": "焼き山芋（2枚）", "ko": "구운 마 (2조각)", "en": "Grilled Japanese yam (2 slices)", "zh": "烤山药（2片）", "zh-Hant": "烤山藥（2片）" },
+      "desc": { "ja": "2枚より（1枚160円）", "ko": "2조각부터 주문 (1조각 160엔)", "en": "Minimum 2 slices (¥160 each)", "zh": "2片起点（每片160日元）", "zh-Hant": "2片起點（每片160日圓）" }
+    },
+    {
+      "id": "shishito", "category": "yasai", "price": 230, "photo": null,
+      "name": { "ja": "シシトウ", "ko": "꽈리고추", "en": "Shishito pepper", "zh": "糯米椒", "zh-Hant": "糯米椒" }
+    },
+    {
+      "id": "tsukune", "category": "other", "price": 230, "photo": null,
+      "name": { "ja": "軟骨入りつくね", "ko": "오돌뼈 넣은 닭 완자 꼬치", "en": "Chicken meatball skewer with cartilage", "zh": "鸡软骨肉丸串", "zh-Hant": "雞軟骨肉丸串" }
+    },
+    {
+      "id": "tonsoku", "category": "other", "price": 500, "photo": null,
+      "name": { "ja": "豚足塩焼き", "ko": "족발 소금구이", "en": "Salt-grilled pig's trotter", "zh": "盐烤猪脚", "zh-Hant": "鹽烤豬腳" }
+    },
+    {
+      "id": "tebasaki", "category": "other", "price": 350, "photo": null,
+      "name": { "ja": "手羽先", "ko": "닭 날개", "en": "Chicken wing", "zh": "鸡翅", "zh-Hant": "雞翅" }
+    },
+    {
+      "id": "umekuzushi", "category": "starter", "price": 390, "photo": null,
+      "name": { "ja": "自家製梅くずし（梅肉）", "ko": "직접 만든 우메쿠즈시 (매실 과육)", "en": "House-made ume kuzushi (pickled plum)", "zh": "自制梅肉小菜", "zh-Hant": "自製梅肉小菜" }
+    },
+    {
+      "id": "kyuri", "category": "starter", "price": 190, "photo": null,
+      "name": { "ja": "キューリ", "ko": "오이", "en": "Cucumber", "zh": "黄瓜", "zh-Hant": "小黃瓜" }
+    },
+    {
+      "id": "superdry", "category": "drink", "price": 560, "photo": null,
+      "name": { "ja": "アサヒスーパードライ", "ko": "아사히 슈퍼드라이 (맥주)", "en": "Asahi Super Dry (beer)", "zh": "朝日 Super Dry 啤酒", "zh-Hant": "朝日 Super Dry 啤酒" }
+    },
+    {
+      "id": "hige-highball", "category": "drink", "price": 610, "photo": null,
+      "name": { "ja": "ひげのハイボール", "ko": "히게 하이볼", "en": "Hige highball", "zh": "HIGE 嗨棒", "zh-Hant": "HIGE 嗨棒" }
+    },
+    {
+      "id": "oolong", "category": "drink", "price": 360, "photo": null,
+      "name": { "ja": "ウーロン茶", "ko": "우롱차", "en": "Oolong tea", "zh": "乌龙茶", "zh-Hant": "烏龍茶" }
+    }
+  ]
+}

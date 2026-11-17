@@ -1,0 +1,140 @@
+{
+  "id": "teppan-ikura",
+  "name": { "ja": "鉄板焼酒場 いくら 天神今泉店", "ko": "철판구이 주점 이쿠라 텐진 이마이즈미점", "en": "Teppanyaki Sakaba Ikura (Tenjin Imaizumi)", "zh": "铁板烧酒场 IKURA 天神今泉店", "zh-Hant": "鐵板燒酒場 IKURA 天神今泉店" },
+  "shortName": { "ja": "鉄板焼酒場いくら" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": false, "price": 440 },
+    "taxIncluded": true,
+    "cashOnly": false
+  },
+  "ownerPicks": ["canape", "suji-kimchi", "ikura-dashimaki"],
+  "categories": [
+    { "id": "meibutsu", "ja": "いくらの名物", "ko": "이쿠라의 명물", "en": "House specialties", "zh": "本店名物", "zh-Hant": "本店名物" },
+    { "id": "tsumami", "ja": "おつまみ", "ko": "안주", "en": "Small plates", "zh": "下酒菜", "zh-Hant": "下酒菜" },
+    { "id": "teppan", "ja": "鉄板焼き", "ko": "철판구이", "en": "Teppanyaki", "zh": "铁板烧", "zh-Hant": "鐵板燒" },
+    { "id": "shime", "ja": "〆", "ko": "마무리 식사", "en": "Rice & noodles", "zh": "主食", "zh-Hant": "主食" },
+    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品", "zh-Hant": "飲品" }
+  ],
+  "items": [
+    {
+      "id": "canape", "category": "meibutsu", "price": 650, "photo": null,
+      "name": { "ja": "アボカドやみつきカナッペ", "ko": "아보카도 카나페", "en": "Avocado canapés", "zh": "牛油果小点", "zh-Hant": "酪梨小點" },
+      "desc": {
+        "ja": "アボカドとトマトを自家製ドレッシングで混ぜ、鉄板でカリッと焼いたパンにのせて食べてください。",
+        "ko": "아보카도와 토마토를 가게에서 만든 드레싱에 버무렸어요. 철판에 바삭하게 구운 빵에 올려 드세요.",
+        "en": "Avocado and tomato tossed in house dressing. Spoon onto the bread, toasted crisp on the griddle.",
+        "zh": "牛油果和番茄拌入自制酱汁，放在铁板烤脆的面包上享用。",
+        "zh-Hant": "酪梨和番茄拌入自製醬汁，放在鐵板烤脆的麵包上享用。"
+      },
+      "options": [
+        { "id": "bread", "ja": "パン", "ko": "빵", "en": "Bread", "zh": "面包", "zh-Hant": "麵包",
+          "choices": [
+            { "ja": "4枚", "ko": "4장", "en": "4 slices", "zh": "4片", "zh-Hant": "4片" },
+            { "ja": "6枚", "ko": "6장", "en": "6 slices", "zh": "6片", "zh-Hant": "6片", "price": 65 }
+          ] }
+      ]
+    },
+    {
+      "id": "dashimaki", "category": "meibutsu", "price": 649, "photo": null,
+      "name": { "ja": "だし巻きたまご", "ko": "다시마키 (일본식 계란말이)", "en": "Dashi rolled omelette", "zh": "高汤玉子烧", "zh-Hant": "高湯玉子燒" }
+    },
+    {
+      "id": "mentai-dashimaki", "category": "meibutsu", "price": 815, "photo": null,
+      "name": { "ja": "博多明太子だし巻きたまご", "ko": "하카타 명란 계란말이", "en": "Hakata mentaiko rolled omelette", "zh": "博多明太子玉子烧", "zh-Hant": "博多明太子玉子燒" }
+    },
+    {
+      "id": "ikura-dashimaki", "category": "meibutsu", "price": 1089, "photo": null,
+      "name": { "ja": "だし巻きたまごの いくらのせ", "ko": "연어알 올린 계란말이", "en": "Rolled omelette topped with salmon roe", "zh": "鲑鱼子玉子烧", "zh-Hant": "鮭魚卵玉子燒" }
+    },
+    {
+      "id": "suji-kimchi", "category": "meibutsu", "price": 539, "photo": null,
+      "name": { "ja": "和牛すじ煮込み キムチのせ", "ko": "김치 올린 와규 힘줄 조림", "en": "Braised wagyu tendon with kimchi", "zh": "炖和牛筋配泡菜", "zh-Hant": "燉和牛筋佐泡菜" },
+      "desc": { "ja": "5時間和牛すじを煮込んでトロトロに", "ko": "와규 힘줄을 5시간 조려 부드럽게", "en": "Wagyu tendon simmered for 5 hours until tender", "zh": "和牛筋炖煮5小时，软嫩入味", "zh-Hant": "和牛筋燉煮5小時，軟嫩入味" }
+    },
+    {
+      "id": "sumotsu", "category": "tsumami", "price": 429, "photo": null,
+      "name": { "ja": "博多名物 酢もつ", "ko": "하카타 명물 스모츠 (식초 곱창)", "en": "Hakata su-motsu (vinegared offal)", "zh": "博多醋拌内脏", "zh-Hant": "博多醋拌內臟" },
+      "desc": { "ja": "いくら特製酢醤油でさっぱり", "ko": "가게 특제 식초 간장으로 산뜻하게", "en": "Light and refreshing, with the house vinegar soy sauce", "zh": "以本店特制醋酱油调味，清爽", "zh-Hant": "以本店特製醋醬油調味，清爽" }
+    },
+    {
+      "id": "gomakyuri", "category": "tsumami", "price": 429, "photo": null,
+      "name": { "ja": "ピリ辛ごまきゅうり", "ko": "매콤한 참깨 오이", "en": "Spicy sesame cucumber", "zh": "香辣芝麻黄瓜", "zh-Hant": "香辣芝麻小黃瓜" },
+      "desc": { "ja": "豆板醤の辛味とごまの香り", "ko": "두반장의 매운맛과 참깨 향", "en": "Heat from doubanjiang chili paste and the aroma of sesame", "zh": "豆瓣酱的辣味与芝麻香", "zh-Hant": "豆瓣醬的辣味與芝麻香" }
+    },
+    {
+      "id": "potesara", "category": "tsumami", "price": 539, "photo": null,
+      "name": { "ja": "いくらのポテサラ", "ko": "이쿠라 감자샐러드", "en": "House potato salad", "zh": "本店土豆沙拉", "zh-Hant": "本店馬鈴薯沙拉" },
+      "desc": {
+        "ja": "タスマニア産マスタードと削りたてパルミジャーノかけてます。",
+        "ko": "태즈메이니아산 머스터드와 갓 간 파르미자노 치즈를 뿌렸어요.",
+        "en": "Topped with Tasmanian mustard and freshly grated Parmigiano.",
+        "zh": "淋上塔斯马尼亚产芥末，撒上现刨帕玛森奶酪。",
+        "zh-Hant": "淋上塔斯馬尼亞產芥末，撒上現刨帕瑪森起司。"
+      }
+    },
+    {
+      "id": "camembert", "category": "tsumami", "price": 539, "photo": null,
+      "name": { "ja": "カマンベールチーズの炙り焼き", "ko": "카망베르 치즈 구이", "en": "Grilled and torched Camembert", "zh": "炙烤卡芒贝尔奶酪", "zh-Hant": "炙烤卡門貝爾起司" },
+      "desc": { "ja": "鉄板で焼き上げて炙ることで香ばしさアップ", "ko": "철판에 구운 뒤 불로 그을려 더 고소하게", "en": "Griddled, then torched for extra aroma", "zh": "铁板烤后再炙烧，更香", "zh-Hant": "鐵板烤後再炙燒，更香" }
+    },
+    {
+      "id": "wagyu-steak", "category": "teppan", "price": 1749, "photo": null,
+      "name": { "ja": "和牛ステーキ", "ko": "와규 스테이크", "en": "Wagyu steak", "zh": "和牛牛排", "zh-Hant": "和牛牛排" },
+      "desc": {
+        "ja": "マル・ラムイチなどモモ肉を日替わりで仕入れています。",
+        "ko": "마루·람이치 등 와규 다리살을 날마다 바꿔 들여와요.",
+        "en": "Wagyu leg cuts such as maru and ramp, chosen daily.",
+        "zh": "每日进货的和牛腿肉（如マル、ランイチ等）。",
+        "zh-Hant": "每日進貨的和牛腿肉（如マル、ランイチ等）。"
+      }
+    },
+    {
+      "id": "ebimayo", "category": "teppan", "price": 759, "photo": null,
+      "name": { "ja": "いくらのエビマヨ", "ko": "이쿠라 새우마요", "en": "House shrimp mayo", "zh": "本店蛋黄酱虾", "zh-Hant": "本店美乃滋蝦" },
+      "desc": { "ja": "スイートチリソースの辛みが効いた、いくらオリジナルソース", "ko": "스위트 칠리소스의 매콤함을 살린 가게 오리지널 소스", "en": "Original house sauce with a kick of sweet chili", "zh": "带甜辣酱辣味的本店原创酱汁", "zh-Hant": "帶甜辣醬辣味的本店原創醬汁" }
+    },
+    {
+      "id": "yamaimo-roll", "category": "teppan", "price": 649, "photo": null,
+      "name": { "ja": "山芋鉄板ロール焼き", "ko": "마 철판 롤 구이", "en": "Griddle-rolled grated yam", "zh": "铁板山药卷", "zh-Hant": "鐵板山藥捲" },
+      "desc": { "ja": "鉄板で焼いて巻くことでフワフワに。あっさり和風だしで。", "ko": "철판에 구워 말아서 폭신하게. 담백한 일본식 육수로.", "en": "Cooked and rolled on the griddle until fluffy, in a light Japanese dashi.", "zh": "在铁板上煎后卷起，口感松软。配清淡和风高汤。", "zh-Hant": "在鐵板上煎後捲起，口感鬆軟。佐清淡和風高湯。" }
+    },
+    {
+      "id": "stamina", "category": "teppan", "price": 1430, "photo": null,
+      "name": { "ja": "スタミナ焼", "ko": "스태미나 철판구이", "en": "Stamina teppan-yaki", "zh": "元气铁板烧", "zh-Hant": "元氣鐵板燒" },
+      "desc": { "ja": "キムチ、ニラ、ネギ、豚バラ、目玉焼き", "ko": "김치, 부추, 파, 삼겹살, 달걀프라이", "en": "Kimchi, garlic chives, green onion, pork belly, fried egg", "zh": "泡菜、韭菜、葱、五花肉、荷包蛋", "zh-Hant": "泡菜、韭菜、蔥、五花肉、荷包蛋" }
+    },
+    {
+      "id": "imaizumi-yaki", "category": "teppan", "price": 1650, "photo": null,
+      "name": { "ja": "博多今泉焼", "ko": "하카타 이마이즈미 철판구이", "en": "Hakata Imaizumi teppan-yaki", "zh": "博多今泉铁板烧", "zh-Hant": "博多今泉鐵板燒" },
+      "desc": { "ja": "ささみ、大葉、チーズ、豚バラ、燻製明太マヨ", "ko": "닭 안심, 시소(차조기), 치즈, 삼겹살, 훈제 명란 마요", "en": "Chicken tenderloin, shiso, cheese, pork belly, smoked mentaiko mayo", "zh": "鸡里脊、紫苏、奶酪、五花肉、烟熏明太子蛋黄酱", "zh-Hant": "雞里肌、紫蘇、起司、五花肉、煙燻明太子美乃滋" }
+    },
+    {
+      "id": "ikura-chahan", "category": "shime", "price": 1320, "photo": null,
+      "name": { "ja": "いくらチャーハン", "ko": "연어알 볶음밥", "en": "Salmon roe fried rice", "zh": "鲑鱼子炒饭", "zh-Hant": "鮭魚卵炒飯" },
+      "desc": { "ja": "八角香る自家製ネギ油使用。贅沢にいくらたっぷり", "ko": "팔각 향의 직접 만든 파기름 사용. 연어알을 듬뿍", "en": "Made with house scallion oil scented with star anise, generously topped with salmon roe", "zh": "使用带八角香的自制葱油，满满的鲑鱼子", "zh-Hant": "使用帶八角香的自製蔥油，滿滿的鮭魚卵" }
+    },
+    {
+      "id": "yakiramen", "category": "shime", "price": 869, "photo": null,
+      "name": { "ja": "博多屋台の焼きラーメン", "ko": "하카타 포장마차식 볶음 라멘", "en": "Hakata street-stall fried ramen", "zh": "博多屋台炒拉面", "zh-Hant": "博多屋台炒拉麵" },
+      "desc": { "ja": "豚骨・オイスターソースベースの細麺焼きラーメン", "ko": "돈코쓰·굴소스 베이스의 가는 면 볶음 라멘", "en": "Thin noodles stir-fried with a pork-bone and oyster sauce base", "zh": "猪骨、蚝油风味的细面炒拉面", "zh-Hant": "豬骨、蠔油風味的細麵炒拉麵" }
+    },
+    {
+      "id": "kuro-label", "category": "drink", "price": 638, "photo": null,
+      "name": { "ja": "サッポロ黒ラベル", "ko": "삿포로 구로라벨 (맥주)", "en": "Sapporo Black Label (beer)", "zh": "札幌黑标啤酒", "zh-Hant": "札幌黑標啤酒" }
+    },
+    {
+      "id": "kaku-highball", "category": "drink", "price": 550, "photo": null,
+      "name": { "ja": "角ハイボール", "ko": "가쿠 하이볼", "en": "Kaku highball", "zh": "角瓶嗨棒", "zh-Hant": "角瓶威士忌蘇打" }
+    },
+    {
+      "id": "kuro-oolong", "category": "drink", "price": 330, "photo": null,
+      "name": { "ja": "黒烏龍茶", "ko": "흑우롱차", "en": "Black oolong tea", "zh": "黑乌龙茶", "zh-Hant": "黑烏龍茶" }
+    }
+  ]
+}

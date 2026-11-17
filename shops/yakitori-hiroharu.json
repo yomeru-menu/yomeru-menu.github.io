@@ -1,0 +1,96 @@
+{
+  "id": "yakitori-hiroharu",
+  "name": { "ja": "焼鳥HIROHARU", "ko": "야키토리 히로하루", "en": "Yakitori HIROHARU", "zh": "烧鸟 HIROHARU", "zh-Hant": "燒鳥 HIROHARU" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": false, "price": null }
+  },
+  "ownerPicks": ["kushi7", "kushi10"],
+  "categories": [
+    { "id": "kushi", "ja": "焼き串", "ko": "꼬치구이", "en": "Skewers", "zh": "串烧", "zh-Hant": "串燒" },
+    { "id": "maki", "ja": "巻きもの", "ko": "말이 꼬치", "en": "Wrapped skewers", "zh": "卷串", "zh-Hant": "捲串" },
+    { "id": "ippin", "ja": "一品", "ko": "한 접시 요리", "en": "Small dishes", "zh": "单品料理", "zh-Hant": "單品料理" },
+    { "id": "agemono", "ja": "揚げ物", "ko": "튀김", "en": "Fried dishes", "zh": "炸物", "zh-Hant": "炸物" },
+    { "id": "hayadashi", "ja": "早出し", "ko": "바로 나오는 안주", "en": "Quick starters", "zh": "快速小菜", "zh-Hant": "快速小菜" },
+    { "id": "gohan", "ja": "ご飯もの", "ko": "밥", "en": "Rice", "zh": "米饭类", "zh-Hant": "飯類" }
+  ],
+  "items": [
+    {
+      "id": "kushi7", "category": "kushi", "price": 1000, "photo": null,
+      "name": { "ja": "大将お任せ 串7種盛り", "ko": "사장님 맡김 꼬치 7종 모둠", "en": "Chef's choice: 7 assorted skewers", "zh": "店主精选 串烧7种拼盘", "zh-Hant": "店主精選 串燒7種拼盤" }
+    },
+    {
+      "id": "kushi10", "category": "kushi", "price": 1500, "photo": null,
+      "name": { "ja": "大将お任せ 串10種盛り", "ko": "사장님 맡김 꼬치 10종 모둠", "en": "Chef's choice: 10 assorted skewers", "zh": "店主精选 串烧10种拼盘", "zh-Hant": "店主精選 串燒10種拼盤" }
+    },
+    {
+      "id": "sagari", "category": "kushi", "price": 380, "photo": null,
+      "name": { "ja": "牛サガリ", "ko": "소 안창살 꼬치", "en": "Beef skirt (sagari) skewer", "zh": "牛横膈膜串", "zh-Hant": "牛橫膈膜串" }
+    },
+    {
+      "id": "butabara", "category": "kushi", "price": 200, "photo": null,
+      "name": { "ja": "豚バラ", "ko": "삼겹살 꼬치", "en": "Pork belly skewer", "zh": "五花肉串", "zh-Hant": "五花肉串" }
+    },
+    {
+      "id": "misobara", "category": "kushi", "price": 200, "photo": null,
+      "name": { "ja": "味噌バラ", "ko": "미소 삼겹살 꼬치", "en": "Miso pork belly skewer", "zh": "味噌五花肉串", "zh-Hant": "味噌五花肉串" }
+    },
+    {
+      "id": "butanankotsu", "category": "kushi", "price": 200, "photo": null,
+      "name": { "ja": "豚なんこつ", "ko": "돼지 오돌뼈 꼬치", "en": "Pork cartilage skewer", "zh": "猪软骨串", "zh-Hant": "豬軟骨串" }
+    },
+    {
+      "id": "kawa", "category": "kushi", "price": 150, "photo": null,
+      "name": { "ja": "皮", "ko": "닭껍질 꼬치", "en": "Chicken skin skewer", "zh": "鸡皮串", "zh-Hant": "雞皮串" }
+    },
+    {
+      "id": "sunazuri", "category": "kushi", "price": 150, "photo": null,
+      "name": { "ja": "砂ずり", "ko": "닭 모래집 꼬치", "en": "Chicken gizzard skewer", "zh": "鸡胗串", "zh-Hant": "雞胗串" }
+    },
+    {
+      "id": "tsukune", "category": "kushi", "price": 150, "photo": null,
+      "name": { "ja": "つくね", "ko": "닭고기 완자 꼬치", "en": "Chicken meatball skewer", "zh": "鸡肉丸串", "zh-Hant": "雞肉丸串" }
+    },
+    {
+      "id": "tebasaki", "category": "kushi", "price": 220, "photo": null,
+      "name": { "ja": "手羽先", "ko": "닭 날개", "en": "Chicken wing", "zh": "鸡翅", "zh-Hant": "雞翅" }
+    },
+    {
+      "id": "yamaimo-maki", "category": "maki", "price": 270, "photo": null,
+      "name": { "ja": "山芋巻", "ko": "마 말이 꼬치", "en": "Japanese yam wrap skewer", "zh": "山药卷串", "zh-Hant": "山藥捲串" }
+    },
+    {
+      "id": "tonsoku", "category": "ippin", "price": 400, "photo": null,
+      "name": { "ja": "豚足", "ko": "족발", "en": "Pig's trotter", "zh": "猪脚", "zh-Hant": "豬腳" }
+    },
+    {
+      "id": "tebamentai", "category": "ippin", "price": 250, "photo": null,
+      "name": { "ja": "手羽明太（1個）", "ko": "명란 닭날개 (1개)", "en": "Chicken wing with mentaiko (1 pc)", "zh": "明太子鸡翅（1个）", "zh-Hant": "明太子雞翅（1個）" }
+    },
+    {
+      "id": "kimchibara", "category": "ippin", "price": 850, "photo": null,
+      "name": { "ja": "キムチバラ", "ko": "김치 삼겹살", "en": "Kimchi and pork belly", "zh": "泡菜五花肉", "zh-Hant": "泡菜五花肉" }
+    },
+    {
+      "id": "agedashi-mochi", "category": "agemono", "price": 700, "photo": null,
+      "name": { "ja": "揚げ出し餅", "ko": "아게다시 떡 (튀긴 떡을 육수에)", "en": "Fried mochi in dashi broth", "zh": "炸年糕浸高汤", "zh-Hant": "炸麻糬浸高湯" }
+    },
+    {
+      "id": "tonbi", "category": "agemono", "price": 600, "photo": null,
+      "name": { "ja": "豚尾（トンビ）の唐揚げ", "ko": "돼지 꼬리 튀김", "en": "Fried pig tail", "zh": "炸猪尾", "zh-Hant": "炸豬尾" }
+    },
+    {
+      "id": "potesara", "category": "hayadashi", "price": 350, "photo": null,
+      "name": { "ja": "ポテトサラダ", "ko": "감자샐러드", "en": "Potato salad", "zh": "土豆沙拉", "zh-Hant": "馬鈴薯沙拉" }
+    },
+    {
+      "id": "yakionigiri", "category": "gohan", "price": 290, "photo": null,
+      "name": { "ja": "焼きおにぎり", "ko": "구운 주먹밥", "en": "Grilled rice ball", "zh": "烤饭团", "zh-Hant": "烤飯糰" }
+    }
+  ]
+}
