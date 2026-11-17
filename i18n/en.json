@@ -21,6 +21,7 @@
   "viewOrders": "Ordered",
   "cart": "Your order",
   "items": "{n} items",
+  "item1": "1 item",
   "newItems": "New items",
   "thisTotal": "This order",
   "orderedItems": "Already ordered",

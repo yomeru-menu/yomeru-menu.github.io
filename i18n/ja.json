@@ -46,6 +46,7 @@
     "guestLang": "お客様の言語：{lang}",
     "langNames": { "ko": "韓国語", "en": "英語", "zh": "中国語", "ja": "日本語" },
     "total": "合計",
+    "count": "{n}点",
     "taxIn": "税込",
     "taxOut": "税抜"
   }

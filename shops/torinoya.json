@@ -146,7 +146,7 @@
       "options": [
         { "id": "style", "ja": "飲み方", "ko": "마시는 방법", "en": "How to serve", "zh": "喝法",
           "choices": [
-            { "ja": "ロック", "ko": "얼음 (온더록)", "en": "On the rocks", "zh": "加冰" },
+            { "ja": "ロック", "ko": "온더록", "en": "On the rocks", "zh": "加冰" },
             { "ja": "ソーダ", "ko": "탄산수 타서", "en": "With soda", "zh": "兑苏打水" },
             { "ja": "水割り", "ko": "물 타서", "en": "With water", "zh": "兑水" }
           ] }
