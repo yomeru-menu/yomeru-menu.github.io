@@ -6,7 +6,9 @@
 (function () {
   'use strict';
 
-  const LANGS = ['ko', 'en', 'zh', 'ja'];
+  const LANGS = ['ko', 'en', 'zh', 'zh-Hant', 'ja'];
+  const LANG_LABEL = { ko: 'KO', en: 'EN', zh: '简', 'zh-Hant': '繁', ja: 'JA' }; // language button
+  const FALLBACK = { 'zh-Hant': 'zh' };  // a missing Traditional text shows the Simplified one
   const EXPIRY_MS = 3 * 60 * 60 * 1000;         // reset cart/history 3h after last use
   const DATA_MAX_AGE_MS = 12 * 60 * 60 * 1000;  // how long a saved copy of the menu may be shown first
   const MAX_QTY = 99;
@@ -49,17 +51,26 @@
     const saved = load(LANG_KEY);
     if (LANGS.includes(saved)) return saved;
     const list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
-    for (const l of list) { const p = String(l).toLowerCase().slice(0, 2); if (LANGS.includes(p)) return p; }
+    for (const l of list) { const m = matchLang(l); if (m) return m; }
     return null;
+  }
+  // zh-TW / zh-HK / zh-MO / zh-Hant-* → Traditional; zh, zh-CN, zh-SG, zh-Hans-* → Simplified
+  function matchLang(tag) {
+    const s = String(tag).toLowerCase();
+    if (s.indexOf('zh') === 0) return /hant|-tw|-hk|-mo/.test(s) ? 'zh-Hant' : 'zh';
+    const p = s.slice(0, 2);
+    return LANGS.includes(p) ? p : null;
   }
 
   /* ---------- helpers ---------- */
   const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ESC[c]); }
-  function L(obj, lg) { if (!obj) return ''; if (typeof obj === 'string') return obj; lg = lg || lang; return obj[lg] || obj.en || obj.ja || ''; }
+  function L(obj, lg) { if (!obj) return ''; if (typeof obj === 'string') return obj; lg = lg || lang; return obj[lg] || obj[FALLBACK[lg]] || obj.en || obj.ja || ''; }
   function fill(s, vars) { if (vars) for (const k in vars) s = s.split('{' + k + '}').join(vars[k]); return s; }
   function t(key, vars, lg) {
-    let s = (I[lg || lang] || {})[key];
+    lg = lg || lang;
+    let s = (I[lg] || {})[key];
+    if (s == null && FALLBACK[lg]) s = (I[FALLBACK[lg]] || {})[key];
     if (s == null) s = (I.en || {})[key];
     if (s == null) s = key;
     return esc(fill(s, vars));
@@ -187,7 +198,7 @@
       : '';
     const right = opts.tools ? `
       <button class="icon-btn" data-act="go" data-to="call">${icon('bell')}<span>${t('call')}</span></button>
-      <button class="icon-btn" data-act="go" data-to="lang" aria-label="${t('language')}">${icon('globe')}<span>${lang.toUpperCase()}</span></button>` : '';
+      <button class="icon-btn" data-act="go" data-to="lang" aria-label="${t('language')}">${icon('globe')}<span lang="${lang}">${LANG_LABEL[lang] || lang}</span></button>` : '';
     return `<header class="top"><div class="wrap">${left}
       <div class="title"><h1>${opts.title}</h1>${seatChip()}</div>${right}</div></header>`;
   }
@@ -262,6 +273,9 @@
     <main class="wrap">
       <div class="banner allergy" role="note">${icon('alert')}<span>${t('allergy')}</span></div>
       ${state.seat ? '' : `<div class="banner waiting">${icon('clock')}<span>${t('waitingNote')}</span></div>`}
+      ${state.rounds === 0 ? `<section class="howto"><h2>${t('howTitle')}</h2>
+        <ol>${['how1', 'how2', 'how3'].map(k => `<li>${t(k)}</li>`).join('')}</ol>
+        <p>${t('howNote')}</p></section>` : ''}
       ${notes.length ? `<section class="notices"><h2>${t('noticeTitle')}</h2><ul>${notes.map(x => `<li>${x}</li>`).join('')}</ul></section>` : ''}
 
       ${picks.length ? `<h2 class="section-title">${t('ownerPicks')}${lang !== 'ja' ? '<small lang="ja">店長のおすすめ</small>' : ''}</h2>
@@ -350,7 +364,7 @@
   function viewLang() {
     return `<main class="lang-screen">
       <div class="brand">YOMERU · ヨメル</div>
-      <h1>Language · 언어 · 语言 · 言語</h1>
+      <h1>Language · 언어 · 语言 · 語言 · 言語</h1>
       <p class="shop" lang="ja">${esc(shop.name.ja)}</p>
       <div class="lang-list">${LANGS.map(l => `<button class="lang-btn ${l === lang ? 'on' : ''}" data-act="setlang" data-lang="${l}" lang="${l}">${esc(I[l].langName)}</button>`).join('')}</div>
     </main>`;
@@ -446,19 +460,6 @@
     }
   }
 
-  // Web fonts load after the first paint and only for the languages on screen.
-  function loadFonts() {
-    const fam = ['Noto+Sans+JP:wght@400;700'];
-    if (lang === 'ko') fam.push('Noto+Sans+KR:wght@400;700');
-    if (lang === 'zh') fam.push('Noto+Sans+SC:wght@400;700');
-    const href = 'https://fonts.googleapis.com/css2?family=' + fam.join('&family=') + '&display=swap';
-    if ([].some.call(document.styleSheets, s => s.href === href) || document.querySelector(`link[href="${href}"]`)) return;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = href;
-    document.head.appendChild(link);
-  }
-
   /* ---------- events ---------- */
   document.addEventListener('click', e => {
     const el = e.target.closest('[data-act]');
@@ -468,7 +469,7 @@
       case 'go': go(d.to); break;
       case 'back': back(d.fb); break;
       case 'setlang':
-        lang = d.lang; store(LANG_KEY, lang); loadFonts();
+        lang = d.lang; store(LANG_KEY, lang);
         if (route() === 'lang') back(); else render();
         break;
       case 'open': openSheet(d.id); break;
@@ -533,7 +534,6 @@
   function start() {
     lang = detectLang();
     render();
-    setTimeout(loadFonts, 60); // after the first paint; a timer also works when the tab is in the background
   }
   function showError(err) {
     console.error(err);

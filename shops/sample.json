@@ -1,6 +1,6 @@
 {
   "id": "sample",
-  "name": { "ja": "サンプル居酒屋", "ko": "샘플 이자카야", "en": "Sample Izakaya", "zh": "示例居酒屋" },
+  "name": { "ja": "サンプル居酒屋", "ko": "샘플 이자카야", "en": "Sample Izakaya", "zh": "示例居酒屋", "zh-Hant": "範例居酒屋" },
   "country": "JP",
   "currency": "JPY",
   "businessType": "restaurant",
@@ -15,48 +15,48 @@
   },
   "ownerPicks": ["goma", "mentai", "kawa"],
   "categories": [
-    { "id": "yaki", "ja": "焼き鳥", "ko": "야키토리 (꼬치)", "en": "Yakitori", "zh": "烤鸡串" },
-    { "id": "dish", "ja": "一品", "ko": "요리", "en": "Dishes", "zh": "菜品" },
-    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品" }
+    { "id": "yaki", "ja": "焼き鳥", "ko": "야키토리 (꼬치)", "en": "Yakitori", "zh": "烤鸡串", "zh-Hant": "烤雞肉串" },
+    { "id": "dish", "ja": "一品", "ko": "요리", "en": "Dishes", "zh": "菜品", "zh-Hant": "料理" },
+    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品", "zh-Hant": "飲品" }
   ],
   "items": [
     {
       "id": "kawa", "category": "yaki", "price": 150, "photo": null,
-      "name": { "ja": "とりかわ", "ko": "닭껍질 꼬치", "en": "Chicken skin skewer", "zh": "鸡皮串" },
-      "desc": { "ja": "カリッと焼いた鶏皮、甘めのタレ", "ko": "바삭하게 구운 닭껍질, 달짝지근한 간장 양념", "en": "Crispy grilled chicken skin with sweet soy glaze", "zh": "烤得酥脆的鸡皮，甜酱油汁" },
+      "name": { "ja": "とりかわ", "ko": "닭껍질 꼬치", "en": "Chicken skin skewer", "zh": "鸡皮串", "zh-Hant": "雞皮串" },
+      "desc": { "ja": "カリッと焼いた鶏皮、甘めのタレ", "ko": "바삭하게 구운 닭껍질, 달짝지근한 간장 양념", "en": "Crispy grilled chicken skin with sweet soy glaze", "zh": "烤得酥脆的鸡皮，甜酱油汁", "zh-Hant": "烤得酥脆的雞皮，甜醬油醬汁" },
       "options": [
-        { "id": "sauce", "ja": "味付け", "ko": "맛", "en": "Seasoning", "zh": "调味",
-          "choices": [ { "ja": "塩", "ko": "소금", "en": "Salt", "zh": "盐" }, { "ja": "タレ", "ko": "양념", "en": "Sauce", "zh": "酱汁" } ] }
+        { "id": "sauce", "ja": "味付け", "ko": "맛", "en": "Seasoning", "zh": "调味", "zh-Hant": "調味",
+          "choices": [ { "ja": "塩", "ko": "소금", "en": "Salt", "zh": "盐", "zh-Hant": "鹽" }, { "ja": "タレ", "ko": "양념", "en": "Sauce", "zh": "酱汁", "zh-Hant": "醬汁" } ] }
       ]
     },
     {
       "id": "negima", "category": "yaki", "price": 180, "photo": null,
-      "name": { "ja": "ねぎま", "ko": "닭고기 파 꼬치", "en": "Chicken & leek skewer", "zh": "鸡肉大葱串" },
-      "desc": { "ja": "鶏もも肉と長ねぎ", "ko": "닭다리살과 대파를 번갈아 꽂은 꼬치", "en": "Chicken thigh and Japanese leek", "zh": "鸡腿肉和大葱" },
+      "name": { "ja": "ねぎま", "ko": "닭고기 파 꼬치", "en": "Chicken & leek skewer", "zh": "鸡肉大葱串", "zh-Hant": "雞肉大蔥串" },
+      "desc": { "ja": "鶏もも肉と長ねぎ", "ko": "닭다리살과 대파를 번갈아 꽂은 꼬치", "en": "Chicken thigh and Japanese leek", "zh": "鸡腿肉和大葱", "zh-Hant": "雞腿肉和大蔥" },
       "options": [
-        { "id": "sauce", "ja": "味付け", "ko": "맛", "en": "Seasoning", "zh": "调味",
-          "choices": [ { "ja": "塩", "ko": "소금", "en": "Salt", "zh": "盐" }, { "ja": "タレ", "ko": "양념", "en": "Sauce", "zh": "酱汁" } ] }
+        { "id": "sauce", "ja": "味付け", "ko": "맛", "en": "Seasoning", "zh": "调味", "zh-Hant": "調味",
+          "choices": [ { "ja": "塩", "ko": "소금", "en": "Salt", "zh": "盐", "zh-Hant": "鹽" }, { "ja": "タレ", "ko": "양념", "en": "Sauce", "zh": "酱汁", "zh-Hant": "醬汁" } ] }
       ]
     },
     {
       "id": "goma", "category": "dish", "price": 780, "photo": null,
-      "name": { "ja": "ごまさば", "ko": "고마사바", "en": "Goma-saba", "zh": "芝麻鲭鱼" },
-      "desc": { "ja": "新鮮なサバをごま醤油で和えた福岡名物", "ko": "날 고등어를 참깨 간장 소스에 버무린 후쿠오카 명물", "en": "Raw mackerel in sesame soy sauce, a Fukuoka specialty", "zh": "生鲭鱼拌芝麻酱油，福冈特色菜" }
+      "name": { "ja": "ごまさば", "ko": "고마사바", "en": "Goma-saba", "zh": "芝麻鲭鱼", "zh-Hant": "芝麻鯖魚" },
+      "desc": { "ja": "新鮮なサバをごま醤油で和えた福岡名物", "ko": "날 고등어를 참깨 간장 소스에 버무린 후쿠오카 명물", "en": "Raw mackerel in sesame soy sauce, a Fukuoka specialty", "zh": "生鲭鱼拌芝麻酱油，福冈特色菜", "zh-Hant": "生鯖魚拌芝麻醬油，福岡特色菜" }
     },
     {
       "id": "mentai", "category": "dish", "price": 580, "photo": null,
-      "name": { "ja": "明太子だし巻き", "ko": "명란 계란말이", "en": "Mentaiko omelette", "zh": "明太子玉子烧" },
-      "desc": { "ja": "だし巻き卵で明太子を巻きました", "ko": "육수를 넣은 부드러운 계란말이 안에 명란", "en": "Soft dashi omelette rolled with spicy cod roe", "zh": "高汤玉子烧卷入辣鳕鱼子" }
+      "name": { "ja": "明太子だし巻き", "ko": "명란 계란말이", "en": "Mentaiko omelette", "zh": "明太子玉子烧", "zh-Hant": "明太子玉子燒" },
+      "desc": { "ja": "だし巻き卵で明太子を巻きました", "ko": "육수를 넣은 부드러운 계란말이 안에 명란", "en": "Soft dashi omelette rolled with spicy cod roe", "zh": "高汤玉子烧卷入辣鳕鱼子", "zh-Hant": "高湯玉子燒捲入辣鱈魚子" }
     },
     {
       "id": "beer", "category": "drink", "price": 550, "photo": null,
-      "name": { "ja": "生ビール", "ko": "생맥주", "en": "Draft beer", "zh": "生啤酒" },
-      "desc": { "ja": "中ジョッキ", "ko": "중간 사이즈 잔", "en": "Medium glass", "zh": "中杯" }
+      "name": { "ja": "生ビール", "ko": "생맥주", "en": "Draft beer", "zh": "生啤酒", "zh-Hant": "生啤酒" },
+      "desc": { "ja": "中ジョッキ", "ko": "중간 사이즈 잔", "en": "Medium glass", "zh": "中杯", "zh-Hant": "中杯" }
     },
     {
       "id": "oolong", "category": "drink", "price": 300, "photo": null,
-      "name": { "ja": "ウーロン茶", "ko": "우롱차", "en": "Oolong tea", "zh": "乌龙茶" },
-      "desc": { "ja": "ノンアルコール", "ko": "무알코올", "en": "Non-alcoholic", "zh": "无酒精" }
+      "name": { "ja": "ウーロン茶", "ko": "우롱차", "en": "Oolong tea", "zh": "乌龙茶", "zh-Hant": "烏龍茶" },
+      "desc": { "ja": "ノンアルコール", "ko": "무알코올", "en": "Non-alcoholic", "zh": "无酒精", "zh-Hant": "無酒精" }
     }
   ]
 }

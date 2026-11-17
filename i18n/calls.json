@@ -1,7 +1,7 @@
 [
-  { "id": "call",  "icon": "bell",    "ja": "すみません、お願いします！", "ko": "직원 불러 주세요", "en": "Please come to our table", "zh": "麻烦过来一下" },
-  { "id": "water", "icon": "water",   "ja": "お水をください",             "ko": "물 주세요",       "en": "Water, please",            "zh": "请给我水" },
-  { "id": "bill",  "icon": "receipt", "ja": "お会計をお願いします",       "ko": "계산할게요",      "en": "Check, please",            "zh": "我要结账" },
-  { "id": "plate", "icon": "plate",   "ja": "取り皿をください",           "ko": "앞접시 주세요",   "en": "Extra plates, please",     "zh": "请给我小碟子" },
-  { "id": "towel", "icon": "towel",   "ja": "おしぼりをください",         "ko": "물수건 주세요",   "en": "Wet towel, please",        "zh": "请给我湿毛巾" }
+  { "id": "call",  "icon": "bell",    "ja": "すみません、お願いします！", "ko": "직원 불러 주세요", "en": "Please come to our table", "zh": "麻烦过来一下", "zh-Hant": "麻煩過來一下" },
+  { "id": "water", "icon": "water",   "ja": "お水をください",             "ko": "물 주세요",       "en": "Water, please",            "zh": "请给我水", "zh-Hant": "請給我水" },
+  { "id": "bill",  "icon": "receipt", "ja": "お会計をお願いします",       "ko": "계산할게요",      "en": "Check, please",            "zh": "我要结账", "zh-Hant": "我要結帳" },
+  { "id": "plate", "icon": "plate",   "ja": "取り皿をください",           "ko": "앞접시 주세요",   "en": "Extra plates, please",     "zh": "请给我小碟子", "zh-Hant": "請給我小盤子" },
+  { "id": "towel", "icon": "towel",   "ja": "おしぼりをください",         "ko": "물수건 주세요",   "en": "Wet towel, please",        "zh": "请给我湿毛巾", "zh-Hant": "請給我濕毛巾" }
 ]

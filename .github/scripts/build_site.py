@@ -89,8 +89,20 @@ def make_og_image(path, title_name, full_name, accent):
         d.text((pad, 335), full_name, font=fit_font(d, full_name, max_w, 40, 28), fill=MUTED)
     d.text((pad, 410), "メニュー · Menu · 메뉴 · 菜单",
            font=fit_font(d, "メニュー · Menu · 메뉴 · 菜单", max_w, 60, 36), fill=accent)
-    d.text((pad, 530), "日本語 · English · 한국어 · 中文", font=font(32), fill=MUTED)
+    d.text((pad, 530), "日本語 · English · 한국어 · 简体中文 · 繁體中文", font=font(32), fill=MUTED)
     img.save(path, "PNG", optimize=True)
+
+
+def missing_hant(node, path="$"):
+    """Yield JSON paths of objects that have "zh" but no "zh-Hant"."""
+    if isinstance(node, dict):
+        if "zh" in node and "zh-Hant" not in node:
+            yield path
+        for k, v in node.items():
+            yield from missing_hant(v, f"{path}.{k}")
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            yield from missing_hant(v, f"{path}[{i}]")
 
 
 for f in sorted((ROOT / "i18n").glob("*.json")):
@@ -118,6 +130,9 @@ for f in sorted((ROOT / "shops").glob("*.json")):
     if not ID_RE.fullmatch(sid):
         fail(f, "shop id (file name) must use only A-Z a-z 0-9 _ -")
     shop = load_json(f)
+    gaps = list(missing_hant(shop))
+    if gaps:
+        print(f"::warning file={f}::{len(gaps)} text(s) have zh but no zh-Hant (Simplified is shown instead), e.g. {gaps[0]}")
     names = shop.get("name") or {}
     full_ja = names.get("ja")
     if not full_ja:
@@ -131,10 +146,10 @@ for f in sorted((ROOT / "shops").glob("*.json")):
              if p in items and (items[p].get("name") or {}).get("ja")][:3]
 
     title = f"{short_ja} {TITLE_SUFFIX}"
-    desc = f"{full_ja}のメニューを日本語・English・한국어・中文で見られます。"
+    desc = f"{full_ja}のメニューを日本語・English・한국어・中文（简体・繁體）で見られます。"
     if picks:
         desc += "おすすめ：" + "・".join(picks) + "。"
-    desc += f" See the {full_en} menu in English, Korean and Chinese."
+    desc += f" See the {full_en} menu in English, Korean and Chinese (Simplified & Traditional)."
 
     dest = OUT / "s" / sid
     dest.mkdir(parents=True, exist_ok=True)
