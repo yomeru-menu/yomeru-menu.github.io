@@ -1,7 +1,7 @@
 """Build _site for GitHub Pages.
 
 For every shops/<id>.json this writes:
-  s/<id>/index.html  index.html + <base href="../../"> + shop title and
+  s/<id>/index.html  app.html + <base href="../../"> + shop title and
                      og:title / og:description / og:image tags
   s/<id>/og.png      1200x630 link-preview image with the shop name
 so /s/<id>/ answers HTTP 200 and shows a proper preview in LINE, Instagram,
@@ -110,20 +110,27 @@ for f in sorted((ROOT / "i18n").glob("*.json")):
 
 shutil.rmtree(OUT, ignore_errors=True)
 OUT.mkdir()
-for name in ["index.html", "404.html", ".nojekyll"]:
+for name in ["404.html", ".nojekyll"]:
     shutil.copy(ROOT / name, OUT / name)
-for name in ["assets", "i18n", "shops"]:
+for name in ["assets", "i18n", "shops", "lp"]:
     shutil.copytree(ROOT / name, OUT / name)
 
-template = (ROOT / "index.html").read_text(encoding="utf-8")
 # Version the CSS/JS addresses per deploy so a phone never mixes a new page
 # with an old cached script (GitHub Pages lets browsers cache for 10 minutes).
 VERSION = (os.environ.get("GITHUB_SHA") or "dev")[:8]
+
+# app.html = the guest menu app; every /s/<id>/ page is built from it.
+template = (ROOT / "app.html").read_text(encoding="utf-8")
 for asset in ("assets/style.css", "assets/app.js"):
     if f'{asset}"' not in template:
-        fail("index.html", f"expected a reference to {asset}")
+        fail("app.html", f"expected a reference to {asset}")
     template = template.replace(f'{asset}"', f'{asset}?v={VERSION}"')
-(OUT / "index.html").write_text(template, encoding="utf-8")
+(OUT / "app.html").write_text(template, encoding="utf-8")
+
+# index.html = the intro page for shop owners (site root).
+landing = (ROOT / "index.html").read_text(encoding="utf-8")
+landing = re.sub(r'(href|src)="(lp/[^"?]+\.(?:css|js))"', rf'\1="\2?v={VERSION}"', landing)
+(OUT / "index.html").write_text(landing, encoding="utf-8")
 
 for f in sorted((ROOT / "shops").glob("*.json")):
     sid = f.stem

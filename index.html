@@ -3,16 +3,195 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#F7F6F2">
-<meta name="robots" content="noindex">
-<title>Yomeru Menu</title>
+<title>ヨメル Yomeru｜外国のお客様に、読めるメニューを</title>
+<meta name="description" content="紙のメニューはそのまま、QRを置くだけ。外国のお客様が自分の言語でメニューを選び、日本語の注文画面をスタッフに見せる、飲食店向けの多言語QRメニューです。1か月無料でお試しいただけます。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ヨメル Yomeru">
+<meta property="og:title" content="ヨメル Yomeru｜外国のお客様に、読めるメニューを">
+<meta property="og:description" content="紙のメニューはそのまま、QRを置くだけ。注文は日本語の画面でスタッフに届きます。1か月無料でお試しいただけます。">
+<meta property="og:url" content="https://yomeru-menu.com/">
+<meta property="og:image" content="https://yomeru-menu.com/lp/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2EEE4">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C7E'/%3E%3Cpath d='M9 11h14M9 16h14M9 21h9' stroke='%23fff' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Hanken+Grotesk:wght@400;500&family=Shippori+Mincho:wght@400;500&display=swap">
+<link rel="stylesheet" href="lp/lp.css">
 </head>
 <body>
-<div id="app"><div class="loading"><span class="spinner"></span><span>メニュー · Menu · 메뉴 · 菜单</span></div></div>
-<div id="sheet-root"></div>
-<noscript><p style="padding:24px;text-align:center">JavaScript を有効にしてください · Please enable JavaScript · 자바스크립트를 켜 주세요 · 请启用 JavaScript</p></noscript>
-<script src="assets/app.js"></script>
+
+<header class="nav">
+  <div class="nav__bar">
+    <a class="wordmark" href="/" aria-label="ヨメル Yomeru トップ"><span class="wordmark__ja">ヨメル</span><span class="wordmark__en">Yomeru</span></a>
+    <nav class="nav__links" aria-label="ページ内">
+      <a href="#how">仕組み</a>
+      <a href="#trial">お試し</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <a class="btn" href="/s/torinoya/?table=3">実際の画面を体験</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1 id="hero-title">外国のお客様に、<br>読めるメニューを。</h1>
+        <p class="lead">紙のメニューはそのまま、QRを置くだけ。注文は日本語の画面でスタッフに届きます。</p>
+        <div class="actions">
+          <a class="btn" href="/s/torinoya/?table=3">実際の画面を体験する</a>
+          <a class="link" href="#how">仕組みを見る</a>
+        </div>
+        <p class="hero__note">スマートフォンで開くと、お客様と同じ画面を操作できます。</p>
+      </div>
+      <div class="pair">
+        <figure class="shot">
+          <img src="lp/img/menu-ko.webp" width="780" height="1560" alt="韓国語で表示されたメニュー画面。料理名の下に日本語名、価格と追加ボタンが並ぶ" fetchpriority="high">
+          <figcaption>お客様の画面（韓国語）</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="lp/img/staff.webp" width="780" height="1560" alt="スタッフに見せる日本語の注文画面。テーブル3番、もも塩焼き×1、サントリー生ビール×2、おにぎり×1、合計4点" fetchpriority="high">
+          <figcaption>スタッフに見せる画面（日本語）</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <div class="head head--split">
+        <h2 id="how-title">お客様がすること</h2>
+        <p class="lead">お店の方は、日本語の画面を読むだけです。</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>QRを読み取る</h3>
+          <p>テーブルのQRを読み取ると、スマートフォンの言語でメニューが開きます。</p>
+        </li>
+        <li>
+          <h3>自分の言語で選ぶ</h3>
+          <p>料理の説明と価格つき。日本語の料理名も並んでいるので、指さしでも伝わります。</p>
+        </li>
+        <li>
+          <h3>日本語の画面を見せる</h3>
+          <p>料理名と数を日本語で大きく表示。テーブル番号も一緒に出ます。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="languages" aria-labelledby="lang-title">
+    <div class="container">
+      <div class="head head--split">
+        <h2 id="lang-title">同じメニューを、5つの言語で</h2>
+        <p class="lead">お客様のスマートフォンの設定で自動的に選ばれ、画面の右上からいつでも切り替えられます。</p>
+      </div>
+      <div class="langs">
+        <figure class="shot">
+          <img src="lp/img/menu-ko-grill.webp" width="780" height="1560" alt="韓国語表示のメニュー。炭火焼きの料理が説明と価格つきで並ぶ" loading="lazy">
+          <figcaption>韓国語</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="lp/img/menu-en.webp" width="780" height="1560" alt="英語表示の同じメニュー" loading="lazy">
+          <figcaption>英語</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="lp/img/menu-zh-Hant.webp" width="780" height="1560" alt="中国語（繁体字）表示の同じメニュー" loading="lazy">
+          <figcaption>中国語（繁体字）。簡体字にも切り替えられます</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="lp/img/menu-ja.webp" width="780" height="1560" alt="日本語表示の同じメニュー" loading="lazy">
+          <figcaption>日本語</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="shop" aria-labelledby="shop-title">
+    <div class="container">
+      <div class="head head--split">
+        <h2 id="shop-title">お店の準備は、ほとんどありません</h2>
+        <p class="lead">機械も、操作もいりません。</p>
+      </div>
+      <dl class="sheet">
+        <div class="sheet__row"><dt>紙のメニュー</dt><dd>今のままお使いください</dd></div>
+        <div class="sheet__row"><dt>置くもの</dt><dd>QRカード。印刷して置くだけです</dd></div>
+        <div class="sheet__row"><dt>機械・タブレット</dt><dd>必要ありません</dd></div>
+        <div class="sheet__row"><dt>スタッフ呼び出し</dt><dd>「お水」「お会計」なども日本語の画面で伝わります</dd></div>
+        <div class="sheet__row"><dt>価格や料理の変更</dt><dd>ご連絡いただければ、こちらで直します</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="band" id="maps" aria-labelledby="maps-title">
+    <div class="container band__grid">
+      <div>
+        <h2 id="maps-title">Googleマップの「メニュー」欄にも</h2>
+        <p class="lead">同じリンクを載せると、来店前の方にも自分の言語でメニューが届きます。</p>
+      </div>
+      <ol class="band__steps">
+        <li>Googleマップのお店情報に、メニューのリンクを登録
+          <small>登録はGoogleビジネスプロフィールの管理者の方が行います。手順はお送りします</small></li>
+        <li>お店を探している外国の方が、来店前にメニューを確認
+          <small>店内のQRと同じメニューです</small></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="trial" aria-labelledby="trial-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="trial-title">まずは1か月、無料で</h2>
+      </div>
+      <div class="trial">
+        <div class="trial__figure">
+          <p>1か月</p>
+          <p>無料でお試し</p>
+        </div>
+        <dl class="sheet">
+          <div class="sheet__row"><dt>始め方</dt><dd>お店のメニューで見本を作り、内容を確認していただいてからQRカードをお送りします</dd></div>
+          <div class="sheet__row"><dt>続けない場合</dt><dd>費用は一切かかりません。QRを片付けていただくだけです</dd></div>
+          <div class="sheet__row"><dt>1か月後</dt><dd>こちらからご連絡し、続けるかどうかをお聞きします</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container close">
+      <div class="close__text">
+        <h2 id="contact-title">まずは、画面をさわってみてください</h2>
+        <div class="actions">
+          <a class="btn" href="/s/torinoya/?table=3">実際の画面を体験する</a>
+        </div>
+        <dl class="contact">
+          <div class="contact__row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/yomeru.menu/" rel="noopener">@yomeru.menu</a>（DM）</dd></div>
+          <div class="contact__row"><dt>メール</dt><dd><a href="mailto:yomeru.menu@gmail.com">yomeru.menu@gmail.com</a></dd></div>
+        </dl>
+      </div>
+      <figure class="shot">
+        <img src="lp/img/call-bill.webp" width="780" height="1560" alt="スタッフ呼び出し画面。テーブル3番、お会計をお願いします、と日本語で大きく表示" loading="lazy">
+        <figcaption>スタッフ呼び出しも日本語で</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__line">ヨメル（読める）は、外国のお客様向けのQRメニューです。</p>
+    <nav class="footer__links" aria-label="フッター">
+      <a href="/s/torinoya/?table=3">実際の画面を体験</a>
+      <a href="#how">仕組み</a>
+      <a href="https://www.instagram.com/yomeru.menu/" rel="noopener">Instagram</a>
+      <a href="mailto:yomeru.menu@gmail.com">メール</a>
+    </nav>
+    <p class="footer__legal">見本の画面は、公開されている情報をもとに作ったものです。© 2026 ヨメル Yomeru</p>
+  </div>
+</footer>
+
 </body>
 </html>

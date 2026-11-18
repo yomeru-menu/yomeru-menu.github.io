@@ -4,26 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Yomeru Menu</title>
-<script>
-  // /s/<shop>/?table=3  →  /?shop=<shop>&table=3
-  // GitHub Pages serves this file for any unknown path, so a new shop
-  // only needs shops/<shop>.json — no per-shop folder.
-  (function () {
-    var m = location.pathname.match(/^(.*?)\/s\/([A-Za-z0-9_-]+)\/?(?:index\.html)?$/);
-    if (m) {
-      var q = new URLSearchParams(location.search);
-      q.set('shop', m[2]);
-      location.replace(m[1] + '/?' + q.toString() + location.hash);
-    }
-  })();
-</script>
+<title>ページが見つかりません | ヨメル Yomeru</title>
 <style>
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F7F6F2; color: #1C2430;
-         font-family: "Noto Sans JP", system-ui, sans-serif; text-align: center; padding: 16px; }
+  :root { --bg: #F7F6F2; --ink: #1C2430; --accent: #2B4C7E; --font: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", Meiryo, sans-serif; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--ink); font-family: var(--font); text-align: center; padding: 16px; }
+  a { color: var(--accent); font-weight: 700; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 </style>
 </head>
 <body>
-  <p>ページが見つかりません · Page not found · 페이지를 찾을 수 없어요</p>
+  <main>
+    <p>ページが見つかりません · Page not found · 페이지를 찾을 수 없어요 · 找不到页面</p>
+    <p><a href="/">ヨメル Yomeru</a></p>
+  </main>
 </body>
 </html>

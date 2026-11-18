@@ -14,3 +14,6 @@ Thumbs.db
 desktop.ini
 .DS_Store
 ~$*
+
+# Hallmark design skill working files (log, lint screenshots)
+.hallmark/

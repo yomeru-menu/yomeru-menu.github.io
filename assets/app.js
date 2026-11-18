@@ -1,6 +1,6 @@
 /* Yomeru guest menu — static, no build step.
- * URL: /s/<id>/?table=<n>  (s/<id>/index.html is generated per shop by the
- *      deploy workflow, with <base href="../../">), or ./?shop=<id>&table=<n>.
+ * URL: /s/<id>/?table=<n>  (s/<id>/index.html is generated per shop from app.html by the
+ *      deploy workflow, with <base href="../../">), or ./app.html?shop=<id>&table=<n>.
  * "table" is stored internally as "seat" so hotels/rooms can reuse it later.
  */
 (function () {
