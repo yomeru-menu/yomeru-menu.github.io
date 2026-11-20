@@ -1,0 +1,152 @@
+{
+  "id": "yakitori-inada",
+  "name": { "ja": "やきとり稲田", "ko": "야키토리 이나다", "en": "Yakitori Inada", "zh": "烤鸡串 稻田", "zh-Hant": "烤雞串 稻田" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": false, "price": 600 },
+    "taxIncluded": true,
+    "lastOrder": "23:00"
+  },
+  "ownerPicks": ["menchi"],
+  "categories": [
+    { "id": "daio", "ja": "天草大王", "ko": "아마쿠사 다이오 (구마모토 토종닭)", "en": "Amakusa Daio chicken", "zh": "天草大王（熊本土鸡）", "zh-Hant": "天草大王（熊本土雞）" },
+    { "id": "kushi", "ja": "朝びき鶏・豚・牛", "ko": "꼬치 (닭·돼지·소)", "en": "Skewers (chicken, pork, beef)", "zh": "串烧（鸡・猪・牛）", "zh-Hant": "串燒（雞・豬・牛）" },
+    { "id": "yasai", "ja": "野菜", "ko": "채소", "en": "Vegetables", "zh": "蔬菜", "zh-Hant": "蔬菜" },
+    { "id": "tsumami", "ja": "つまみ・揚もの", "ko": "안주·튀김", "en": "Small dishes & fried", "zh": "下酒菜・炸物", "zh-Hant": "下酒菜・炸物" },
+    { "id": "shime", "ja": "〆", "ko": "마무리 식사", "en": "To finish", "zh": "收尾主食", "zh-Hant": "收尾主食" },
+    { "id": "dessert", "ja": "デザート", "ko": "디저트", "en": "Dessert", "zh": "甜品", "zh-Hant": "甜品" },
+    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品", "zh-Hant": "飲品" }
+  ],
+  "items": [
+    {
+      "id": "daio-mune", "category": "daio", "price": 407, "photo": null,
+      "name": { "ja": "胸身", "ko": "닭가슴살 꼬치", "en": "Breast skewer", "zh": "鸡胸肉串", "zh-Hant": "雞胸肉串" },
+      "desc": { "ja": "天草大王の旨味を", "ko": "아마쿠사 다이오의 감칠맛을 그대로", "en": "The rich flavor of Amakusa Daio", "zh": "品尝天草大王的鲜美", "zh-Hant": "品嚐天草大王的鮮美" }
+    },
+    {
+      "id": "daio-kashiwa", "category": "daio", "price": 407, "photo": null,
+      "name": { "ja": "かしわ", "ko": "닭다리살과 대파 꼬치", "en": "Chicken thigh & green onion skewer", "zh": "鸡腿肉大葱串", "zh-Hant": "雞腿肉大蔥串" },
+      "options": [
+        { "id": "sauce", "ja": "味付け", "ko": "맛", "en": "Seasoning", "zh": "调味", "zh-Hant": "調味",
+          "choices": [
+            { "ja": "タレ", "ko": "양념", "en": "Sauce", "zh": "酱汁", "zh-Hant": "醬汁" },
+            { "ja": "塩", "ko": "소금", "en": "Salt", "zh": "盐", "zh-Hant": "鹽" }
+          ] }
+      ]
+    },
+    {
+      "id": "daio-sasami", "category": "daio", "price": 418, "photo": null,
+      "name": { "ja": "ささみわさび", "ko": "닭가슴 안심 와사비 꼬치", "en": "Breast tender with wasabi", "zh": "鸡柳芥末串", "zh-Hant": "雞柳芥末串" }
+    },
+    {
+      "id": "daio-soriresu", "category": "daio", "price": 462, "photo": null,
+      "name": { "ja": "ソリレス", "ko": "솔리레스 (허리 쪽 다리살)", "en": "Sot-l'y-laisse (chicken oyster)", "zh": "鸡腰窝肉串", "zh-Hant": "雞腰窩肉串" },
+      "desc": { "ja": "腰のくぼみにあるお肉", "ko": "허리 오목한 곳에 있는 살이에요", "en": "Meat from the hollow of the back", "zh": "腰部凹陷处的肉", "zh-Hant": "腰部凹陷處的肉" }
+    },
+    {
+      "id": "daio-tebasaki", "category": "daio", "price": 462, "photo": null,
+      "name": { "ja": "手羽先", "ko": "닭날개 꼬치", "en": "Chicken wing skewer", "zh": "鸡翅串", "zh-Hant": "雞翅串" }
+    },
+    {
+      "id": "bonjiri", "category": "kushi", "price": 275, "photo": null,
+      "name": { "ja": "ぼんじり", "ko": "닭꼬리살 꼬치 (본지리)", "en": "Chicken tail skewer", "zh": "鸡尾肉串", "zh-Hant": "雞尾肉串" },
+      "desc": { "ja": "しっぽの部分", "ko": "꼬리 부분이에요", "en": "The tail part", "zh": "鸡尾部分", "zh-Hant": "雞尾部分" }
+    },
+    {
+      "id": "kimo", "category": "kushi", "price": 297, "photo": null,
+      "name": { "ja": "鳥きも", "ko": "닭간 꼬치", "en": "Chicken liver skewer", "zh": "鸡肝串", "zh-Hant": "雞肝串" }
+    },
+    {
+      "id": "seseri", "category": "kushi", "price": 297, "photo": null,
+      "name": { "ja": "せせり", "ko": "닭목살 꼬치", "en": "Chicken neck skewer", "zh": "鸡颈肉串", "zh-Hant": "雞頸肉串" }
+    },
+    {
+      "id": "torikawa", "category": "kushi", "price": 297, "photo": null,
+      "name": { "ja": "鳥皮", "ko": "닭껍질 꼬치", "en": "Chicken skin skewer", "zh": "鸡皮串", "zh-Hant": "雞皮串" }
+    },
+    {
+      "id": "tsukune", "category": "kushi", "price": 308, "photo": null,
+      "name": { "ja": "つくね", "ko": "닭고기 완자 꼬치 (츠쿠네)", "en": "Chicken meatball skewer (tsukune)", "zh": "鸡肉丸串", "zh-Hant": "雞肉丸串" }
+    },
+    {
+      "id": "butabara", "category": "kushi", "price": 308, "photo": null,
+      "name": { "ja": "豚バラ", "ko": "삼겹살 꼬치", "en": "Pork belly skewer", "zh": "五花肉串", "zh-Hant": "五花肉串" }
+    },
+    {
+      "id": "wagyu-sagari", "category": "kushi", "price": 814, "photo": null,
+      "name": { "ja": "和牛さがり", "ko": "와규 안창살 꼬치", "en": "Wagyu hanging tender skewer", "zh": "和牛横膈膜串", "zh-Hant": "和牛橫膈膜串" }
+    },
+    {
+      "id": "shiitake", "category": "yasai", "price": 264, "photo": null,
+      "name": { "ja": "椎茸", "ko": "표고버섯 꼬치", "en": "Shiitake mushroom skewer", "zh": "香菇串", "zh-Hant": "香菇串" }
+    },
+    {
+      "id": "bagna", "category": "yasai", "price": 1760, "photo": null,
+      "name": { "ja": "稲田のバーニャカウダ", "ko": "이나다 바냐카우다 (채소 스틱)", "en": "Inada's bagna cauda", "zh": "稻田风热蘸酱蔬菜", "zh-Hant": "稻田風熱蘸醬蔬菜" },
+      "desc": { "ja": "新鮮な野菜スティックをオリジナルのディップソースで", "ko": "신선한 채소 스틱을 가게만의 소스에 찍어 드세요", "en": "Assorted fresh vegetable sticks with original dip sauce", "zh": "新鲜蔬菜条配原创蘸酱", "zh-Hant": "新鮮蔬菜條佐原創蘸醬" }
+    },
+    {
+      "id": "potesala", "category": "yasai", "price": 660, "photo": null,
+      "name": { "ja": "ポテトサラダ", "ko": "감자샐러드", "en": "Potato salad", "zh": "土豆沙拉", "zh-Hant": "馬鈴薯沙拉" }
+    },
+    {
+      "id": "kyuri", "category": "yasai", "price": 517, "photo": null,
+      "name": { "ja": "きゅうりのたたき", "ko": "두드린 오이 무침", "en": "Smashed cucumber", "zh": "拍黄瓜", "zh-Hant": "拍小黃瓜" }
+    },
+    {
+      "id": "uni-maki", "category": "tsumami", "price": 880, "photo": null,
+      "name": { "ja": "特選和牛のうに巻き（一貫）", "ko": "특선 와규 성게 말이 (1개)", "en": "Broiled wagyu rolled with sea urchin (1 pc)", "zh": "特选和牛海胆卷（1贯）", "zh-Hant": "特選和牛海膽卷（1貫）" }
+    },
+    {
+      "id": "mentaiko", "category": "tsumami", "price": 550, "photo": null,
+      "name": { "ja": "やまやの明太子", "ko": "야마야 명란젓", "en": "Yamaya mentaiko (spicy cod roe)", "zh": "Yamaya明太子", "zh-Hant": "Yamaya明太子" }
+    },
+    {
+      "id": "menchi", "category": "tsumami", "price": 495, "photo": null,
+      "name": { "ja": "博多で一番美味しいメンチカツ", "ko": "하카타에서 제일 맛있는 멘치카츠", "en": "Best minced meat cutlet in Hakata", "zh": "博多最好吃的炸肉饼", "zh-Hant": "博多最好吃的炸肉餅" },
+      "desc": { "ja": "名物", "ko": "가게 명물", "en": "House specialty", "zh": "招牌", "zh-Hant": "招牌" }
+    },
+    {
+      "id": "hirekatsu-sand", "category": "tsumami", "price": 990, "photo": null,
+      "name": { "ja": "ヒレカツサンド", "ko": "안심 돈카츠 샌드", "en": "Pork fillet cutlet sandwich", "zh": "炸里脊三明治", "zh-Hant": "炸里肌三明治" }
+    },
+    {
+      "id": "daio-chazuke", "category": "shime", "price": 770, "photo": null,
+      "name": { "ja": "大王スープ茶漬け", "ko": "다이오 수프 오차즈케", "en": "Daio chazuke", "zh": "大王鸡汤泡饭", "zh-Hant": "大王雞湯泡飯" },
+      "desc": { "ja": "天草大王のスープをかけたごはん", "ko": "아마쿠사 다이오 닭 수프를 부은 밥", "en": "Rice with Amakusa Daio chicken soup poured over", "zh": "浇上天草大王鸡汤的米饭", "zh-Hant": "淋上天草大王雞湯的米飯" }
+    },
+    {
+      "id": "kashiwameshi", "category": "shime", "price": 792, "photo": null,
+      "name": { "ja": "炊きたて かしわ飯（一合）", "ko": "갓 지은 닭고기 영양밥 (1홉)", "en": "Freshly cooked chicken rice in an earthen pot (1 gō)", "zh": "现煮鸡肉饭（一合）", "zh-Hant": "現煮雞肉飯（一合）" }
+    },
+    {
+      "id": "oyakodon", "category": "shime", "price": 770, "photo": null,
+      "name": { "ja": "こだわり親子丼", "ko": "정성 오야코동", "en": "Special oyakodon (chicken and egg rice bowl)", "zh": "讲究亲子丼", "zh-Hant": "講究親子丼" }
+    },
+    {
+      "id": "tiramisu", "category": "dessert", "price": 528, "photo": null,
+      "name": { "ja": "今更ですけど!ティラミス", "ko": "이제 와서지만! 티라미수", "en": "Tiramisu (yes, really!)", "zh": "虽然有点晚了！提拉米苏", "zh-Hant": "雖然有點晚了！提拉米蘇" }
+    },
+    {
+      "id": "draft-beer", "category": "drink", "price": 693, "photo": null,
+      "name": { "ja": "ザ・プレミアム・モルツ（生ビール）", "ko": "더 프리미엄 몰츠 (생맥주)", "en": "The Premium Malt's (draft beer)", "zh": "三得利顶级生啤", "zh-Hant": "三得利頂級生啤" }
+    },
+    {
+      "id": "highball", "category": "drink", "price": 660, "photo": null,
+      "name": { "ja": "角ハイボール", "ko": "가쿠 하이볼", "en": "Kaku highball", "zh": "角瓶嗨棒", "zh-Hant": "角瓶嗨棒" }
+    },
+    {
+      "id": "lemon-sour", "category": "drink", "price": 572, "photo": null,
+      "name": { "ja": "レモンサワー", "ko": "레몬사와", "en": "Lemon sour", "zh": "柠檬沙瓦", "zh-Hant": "檸檬沙瓦" }
+    },
+    {
+      "id": "oolong", "category": "drink", "price": 495, "photo": null,
+      "name": { "ja": "烏龍茶", "ko": "우롱차", "en": "Oolong tea", "zh": "乌龙茶", "zh-Hant": "烏龍茶" }
+    }
+  ]
+}

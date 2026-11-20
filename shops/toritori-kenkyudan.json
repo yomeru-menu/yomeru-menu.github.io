@@ -1,0 +1,198 @@
+{
+  "id": "toritori-kenkyudan",
+  "name": { "ja": "鳥鶏研究団", "ko": "토리토리 연구단", "en": "Toritori Kenkyudan", "zh": "鸟鸡研究团", "zh-Hant": "鳥雞研究團" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": false, "price": null },
+    "taxIncluded": true,
+    "cashOnly": false
+  },
+  "ownerPicks": ["omakase5", "kisho5", "jidori5"],
+  "categories": [
+    { "id": "kushi", "ja": "焼鳥盛り合わせ", "ko": "야키토리 모둠", "en": "Yakitori sets", "zh": "烤鸡串拼盘", "zh-Hant": "烤雞串拼盤" },
+    { "id": "small", "ja": "一品", "ko": "안주", "en": "Small dishes", "zh": "小菜", "zh-Hant": "小菜" },
+    { "id": "fry", "ja": "揚げ物", "ko": "튀김", "en": "Fried", "zh": "炸物", "zh-Hant": "炸物" },
+    { "id": "rice", "ja": "ごはん", "ko": "밥", "en": "Rice", "zh": "米饭", "zh-Hant": "米飯" },
+    { "id": "ramen", "ja": "鶏出汁らーめん", "ko": "닭육수 라멘", "en": "Chicken broth ramen", "zh": "鸡汤拉面", "zh-Hant": "雞湯拉麵" },
+    { "id": "sweet", "ja": "甘味", "ko": "디저트", "en": "Dessert", "zh": "甜品", "zh-Hant": "甜品" },
+    { "id": "drink", "ja": "ドリンク", "ko": "음료", "en": "Drinks", "zh": "饮品", "zh-Hant": "飲品" }
+  ],
+  "items": [
+    {
+      "id": "omakase5", "category": "kushi", "price": 1600, "photo": null,
+      "name": { "ja": "おまかせ5種", "ko": "오마카세 꼬치 5종", "en": "Chef's choice, 5 skewers", "zh": "主厨精选5串", "zh-Hant": "主廚精選5串" },
+      "desc": {
+        "ja": "希少部位も含めたおすすめの５本になります",
+        "ko": "희소 부위를 포함한 추천 꼬치 5개예요",
+        "en": "Five recommended skewers, including rare cuts",
+        "zh": "包含稀有部位的推荐5串", "zh-Hant": "包含稀有部位的推薦5串"
+      }
+    },
+    {
+      "id": "kisho5", "category": "kushi", "price": 1800, "photo": null,
+      "name": { "ja": "希少部位5種", "ko": "희소 부위 꼬치 5종", "en": "Rare cuts, 5 skewers", "zh": "稀有部位5串", "zh-Hant": "稀有部位5串" },
+      "desc": {
+        "ja": "全て希少部位の５本になります",
+        "ko": "모두 희소 부위로 된 꼬치 5개예요",
+        "en": "Five skewers, all rare cuts",
+        "zh": "5串全部为稀有部位", "zh-Hant": "5串全部為稀有部位"
+      }
+    },
+    {
+      "id": "jidori5", "category": "kushi", "price": 2200, "photo": null,
+      "name": { "ja": "本日の厳選地鶏5種", "ko": "오늘의 엄선 토종닭 꼬치 5종", "en": "Today's select jidori, 5 skewers", "zh": "今日精选土鸡5串", "zh-Hant": "今日精選土雞5串" },
+      "desc": {
+        "ja": "本日お出しできる最高の状態の地鶏を",
+        "ko": "오늘 낼 수 있는 가장 좋은 상태의 토종닭(지도리)으로",
+        "en": "Jidori (free-range chicken) in the best condition we can serve today",
+        "zh": "使用今日状态最佳的土鸡", "zh-Hant": "使用今日狀態最佳的土雞"
+      }
+    },
+    {
+      "id": "edamame", "category": "small", "price": 330, "photo": null,
+      "name": { "ja": "枝豆", "ko": "풋콩 (에다마메)", "en": "Edamame", "zh": "毛豆", "zh-Hant": "毛豆" }
+    },
+    {
+      "id": "kawa-ponzu", "category": "small", "price": 440, "photo": null,
+      "name": { "ja": "とり皮ポン酢", "ko": "닭껍질 폰즈", "en": "Chicken skin with ponzu", "zh": "鸡皮配柚子醋", "zh-Hant": "雞皮佐柚子醋" }
+    },
+    {
+      "id": "tomato-celery", "category": "small", "price": 480, "photo": null,
+      "name": { "ja": "トマト×セロリの酢漬け", "ko": "토마토와 셀러리 초절임", "en": "Pickled tomato and celery", "zh": "醋渍番茄芹菜", "zh-Hant": "醋漬番茄芹菜" }
+    },
+    {
+      "id": "liver-pate", "category": "small", "price": 650, "photo": null,
+      "name": { "ja": "はかた地どりレバーパテ", "ko": "하카타 토종닭 간 파테", "en": "Hakata jidori liver pâté", "zh": "博多土鸡肝酱", "zh-Hant": "博多土雞肝醬" }
+    },
+    {
+      "id": "soboro-cheese", "category": "small", "price": 600, "photo": null,
+      "name": { "ja": "鶏そぼろのクリームチーズ寄せ", "ko": "닭고기 소보로 크림치즈", "en": "Minced chicken with cream cheese", "zh": "鸡肉松奶油奶酪", "zh-Hant": "雞肉鬆奶油起司" }
+    },
+    {
+      "id": "potesala", "category": "small", "price": 520, "photo": null,
+      "name": { "ja": "鶏生ハムのポテトサラダ", "ko": "닭 생햄 감자샐러드", "en": "Potato salad with chicken ham", "zh": "鸡肉生火腿土豆沙拉", "zh-Hant": "雞肉生火腿馬鈴薯沙拉" }
+    },
+    {
+      "id": "momo-karaage", "category": "fry", "price": 780, "photo": null,
+      "name": { "ja": "はかた地どりのモモ唐揚げ", "ko": "하카타 토종닭 다리살 가라아게", "en": "Hakata jidori thigh karaage (fried chicken)", "zh": "博多土鸡腿肉炸鸡", "zh-Hant": "博多土雞腿肉炸雞" }
+    },
+    {
+      "id": "kawa-chips", "category": "fry", "price": 520, "photo": null,
+      "name": { "ja": "とり皮パリパリチップス", "ko": "바삭바삭 닭껍질 칩스", "en": "Crispy chicken skin chips", "zh": "脆鸡皮片", "zh-Hant": "脆雞皮片" }
+    },
+    {
+      "id": "fries", "category": "fry", "price": 440, "photo": null,
+      "name": { "ja": "フライドポテト", "ko": "감자튀김", "en": "French fries", "zh": "炸薯条", "zh-Hant": "炸薯條" }
+    },
+    {
+      "id": "yaki-onigiri", "category": "rice", "price": 300, "photo": null,
+      "name": { "ja": "焼きオニギリ", "ko": "구운 주먹밥", "en": "Grilled rice ball", "zh": "烤饭团", "zh-Hant": "烤飯糰" }
+    },
+    {
+      "id": "tkg", "category": "rice", "price": 380, "photo": null,
+      "name": { "ja": "てつやとのりこの卵かけごはん", "ko": "날달걀 비빔밥 (다마고카케고항)", "en": "Rice with raw egg (tamago kake gohan)", "zh": "生鸡蛋拌饭", "zh-Hant": "生雞蛋拌飯" }
+    },
+    {
+      "id": "oyakodon", "category": "rice", "price": 680, "photo": null,
+      "name": { "ja": "〆サイズの親子丼", "ko": "마무리용 작은 오야코동", "en": "Small oyakodon (chicken and egg rice bowl)", "zh": "收尾小份亲子丼", "zh-Hant": "收尾小份親子丼" }
+    },
+    {
+      "id": "shio-ramen", "category": "ramen", "price": 770, "photo": null,
+      "name": { "ja": "黄金スープのあっさり塩らーめん", "ko": "황금 수프 담백한 소금 라멘", "en": "Light salt ramen in golden broth", "zh": "黄金汤清爽盐味拉面", "zh-Hant": "黃金湯清爽鹽味拉麵" },
+      "desc": {
+        "ja": "はかた地どりから丁寧にとった心に染みるスープです",
+        "ko": "하카타 토종닭으로 정성껏 우려낸 수프예요",
+        "en": "A soothing broth carefully made from Hakata jidori",
+        "zh": "用博多土鸡精心熬制的暖心汤头", "zh-Hant": "以博多土雞精心熬製的暖心湯頭"
+      },
+      "options": [
+        { "id": "size", "ja": "サイズ", "ko": "크기", "en": "Size", "zh": "份量", "zh-Hant": "份量",
+          "choices": [
+            { "ja": "普通", "ko": "보통", "en": "Regular", "zh": "普通", "zh-Hant": "普通" },
+            { "ja": "ハーフ", "ko": "하프", "en": "Half", "zh": "半份", "zh-Hant": "半份", "price": -280 }
+          ] }
+      ]
+    },
+    {
+      "id": "shoyu-ramen", "category": "ramen", "price": 770, "photo": null,
+      "name": { "ja": "薫る淡麗醤油らーめん", "ko": "향긋한 담백 간장 라멘", "en": "Fragrant light soy sauce ramen", "zh": "清香淡丽酱油拉面", "zh-Hant": "清香淡麗醬油拉麵" },
+      "desc": {
+        "ja": "はかた地どりから丁寧にとった心に染みるスープです",
+        "ko": "하카타 토종닭으로 정성껏 우려낸 수프예요",
+        "en": "A soothing broth carefully made from Hakata jidori",
+        "zh": "用博多土鸡精心熬制的暖心汤头", "zh-Hant": "以博多土雞精心熬製的暖心湯頭"
+      },
+      "options": [
+        { "id": "size", "ja": "サイズ", "ko": "크기", "en": "Size", "zh": "份量", "zh-Hant": "份量",
+          "choices": [
+            { "ja": "普通", "ko": "보통", "en": "Regular", "zh": "普通", "zh-Hant": "普通" },
+            { "ja": "ハーフ", "ko": "하프", "en": "Half", "zh": "半份", "zh-Hant": "半份", "price": -280 }
+          ] }
+      ]
+    },
+    {
+      "id": "paitan-ramen", "category": "ramen", "price": 880, "photo": null,
+      "name": { "ja": "こってり鶏白湯らーめん", "ko": "진한 닭 백탕(파이탄) 라멘", "en": "Rich creamy chicken (paitan) ramen", "zh": "浓郁鸡白汤拉面", "zh-Hant": "濃郁雞白湯拉麵" },
+      "desc": {
+        "ja": "地鶏の旨みがギュッと凝縮した濃厚スープです",
+        "ko": "토종닭의 감칠맛을 꽉 응축한 진한 수프예요",
+        "en": "A rich broth packed with the flavor of jidori",
+        "zh": "浓缩土鸡鲜味的浓厚汤头", "zh-Hant": "濃縮土雞鮮味的濃厚湯頭"
+      },
+      "options": [
+        { "id": "size", "ja": "サイズ", "ko": "크기", "en": "Size", "zh": "份量", "zh-Hant": "份量",
+          "choices": [
+            { "ja": "普通", "ko": "보통", "en": "Regular", "zh": "普通", "zh-Hant": "普通" },
+            { "ja": "ハーフ", "ko": "하프", "en": "Half", "zh": "半份", "zh-Hant": "半份", "price": -350 }
+          ] }
+      ]
+    },
+    {
+      "id": "tantan", "category": "ramen", "price": 990, "photo": null,
+      "name": { "ja": "旨辛坦々麺", "ko": "매콤한 탄탄멘", "en": "Spicy tantanmen", "zh": "香辣担担面", "zh-Hant": "香辣擔擔麵" },
+      "options": [
+        { "id": "size", "ja": "サイズ", "ko": "크기", "en": "Size", "zh": "份量", "zh-Hant": "份量",
+          "choices": [
+            { "ja": "普通", "ko": "보통", "en": "Regular", "zh": "普通", "zh-Hant": "普通" },
+            { "ja": "ハーフ", "ko": "하프", "en": "Half", "zh": "半份", "zh-Hant": "半份", "price": -400 }
+          ] }
+      ]
+    },
+    {
+      "id": "amaou-ice", "category": "sweet", "price": 390, "photo": null,
+      "name": { "ja": "あまおうアイス", "ko": "아마오우 딸기 아이스크림", "en": "Amaou strawberry ice cream", "zh": "甘王草莓冰淇淋", "zh-Hant": "甘王草莓冰淇淋" }
+    },
+    {
+      "id": "choco-ice", "category": "sweet", "price": 390, "photo": null,
+      "name": { "ja": "ベルギーチョコアイス", "ko": "벨기에 초콜릿 아이스크림", "en": "Belgian chocolate ice cream", "zh": "比利时巧克力冰淇淋", "zh-Hant": "比利時巧克力冰淇淋" }
+    },
+    {
+      "id": "beer", "category": "drink", "price": 700, "photo": null,
+      "name": { "ja": "キリン一番搾り", "ko": "기린 이치방시보리 (생맥주)", "en": "Kirin Ichiban Shibori beer", "zh": "麒麟一番榨啤酒", "zh-Hant": "麒麟一番搾啤酒" }
+    },
+    {
+      "id": "highball", "category": "drink", "price": 600, "photo": null,
+      "name": { "ja": "ハイボール キリン陸", "ko": "하이볼 (기린 리쿠)", "en": "Highball (Kirin Riku whisky)", "zh": "嗨棒（麒麟陆威士忌）", "zh-Hant": "嗨棒（麒麟陸威士忌）" }
+    },
+    {
+      "id": "glass-wine", "category": "drink", "price": 740, "photo": null,
+      "name": { "ja": "グラスワイン（赤／白）", "ko": "글라스 와인 (레드/화이트)", "en": "Glass of wine (red / white)", "zh": "杯装葡萄酒（红／白）", "zh-Hant": "杯裝葡萄酒（紅／白）" },
+      "options": [
+        { "id": "color", "ja": "赤／白", "ko": "레드/화이트", "en": "Red / white", "zh": "红／白", "zh-Hant": "紅／白",
+          "choices": [
+            { "ja": "赤", "ko": "레드", "en": "Red", "zh": "红", "zh-Hant": "紅" },
+            { "ja": "白", "ko": "화이트", "en": "White", "zh": "白", "zh-Hant": "白" }
+          ] }
+      ]
+    },
+    {
+      "id": "non-alc", "category": "drink", "price": 550, "photo": null,
+      "name": { "ja": "ノンアルコール キリングリーンズフリー", "ko": "무알코올 맥주 (기린 그린스 프리)", "en": "Non-alcoholic beer (Kirin Greens Free)", "zh": "无酒精啤酒（麒麟Greens Free）", "zh-Hant": "無酒精啤酒（麒麟Greens Free）" }
+    }
+  ]
+}

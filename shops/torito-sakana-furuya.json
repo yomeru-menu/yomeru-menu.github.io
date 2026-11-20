@@ -1,0 +1,165 @@
+{
+  "id": "torito-sakana-furuya",
+  "name": { "ja": "鶏と肴 フルヤ", "ko": "토리토사카나 후루야", "en": "Tori to Sakana Furuya", "zh": "鸡与肴 FURUYA", "zh-Hant": "雞與肴 FURUYA" },
+  "country": "JP",
+  "currency": "JPY",
+  "businessType": "restaurant",
+  "sourceLanguage": "ja",
+  "accent": "#2B4C7E",
+  "seats": null,
+  "notices": {
+    "otoshi": { "enabled": false, "price": 380 },
+    "cashOnly": false
+  },
+  "ownerPicks": [],
+  "categories": [
+    { "id": "kushi", "ja": "串", "ko": "꼬치", "en": "Skewers", "zh": "串烧", "zh-Hant": "串燒" },
+    { "id": "oden", "ja": "特製鶏出汁おでん", "ko": "특제 닭육수 오뎅", "en": "Oden in chicken broth", "zh": "特制鸡汤关东煮", "zh-Hant": "特製雞湯關東煮" },
+    { "id": "yasai", "ja": "お野菜", "ko": "채소", "en": "Vegetables", "zh": "蔬菜", "zh-Hant": "蔬菜" },
+    { "id": "sakana", "ja": "肴", "ko": "안주", "en": "Small dishes", "zh": "下酒菜", "zh-Hant": "下酒菜" },
+    { "id": "age", "ja": "揚げ物", "ko": "튀김", "en": "Fried", "zh": "炸物", "zh-Hant": "炸物" },
+    { "id": "shime", "ja": "〆もの", "ko": "마무리 식사", "en": "To finish", "zh": "收尾主食", "zh-Hant": "收尾主食" },
+    { "id": "dessert", "ja": "デザート", "ko": "디저트", "en": "Dessert", "zh": "甜品", "zh-Hant": "甜品" }
+  ],
+  "items": [
+    {
+      "id": "kashiwa", "category": "kushi", "price": 280, "photo": null,
+      "name": { "ja": "かしわ", "ko": "닭다리살 꼬치 (카시와)", "en": "Chicken thigh skewer", "zh": "鸡腿肉串", "zh-Hant": "雞腿肉串" },
+      "desc": {
+        "ja": "高坂地鶏のもも肉使用！",
+        "ko": "고사카 토종닭 다리살을 써요!",
+        "en": "Made with Kosaka jidori thigh!",
+        "zh": "使用高坂土鸡腿肉！", "zh-Hant": "使用高坂土雞腿肉！"
+      },
+      "options": [
+        { "id": "sauce", "ja": "味付け", "ko": "맛", "en": "Seasoning", "zh": "调味", "zh-Hant": "調味",
+          "choices": [
+            { "ja": "塩", "ko": "소금", "en": "Salt", "zh": "盐", "zh-Hant": "鹽" },
+            { "ja": "タレ", "ko": "양념", "en": "Sauce", "zh": "酱汁", "zh-Hant": "醬汁" }
+          ] }
+      ]
+    },
+    {
+      "id": "hatsu", "category": "kushi", "price": 250, "photo": null,
+      "name": { "ja": "はつ", "ko": "닭염통 꼬치", "en": "Chicken heart skewer", "zh": "鸡心串", "zh-Hant": "雞心串" },
+      "desc": { "ja": "もっちり弾む弾力。", "ko": "쫀득하고 탱글탱글해요.", "en": "Chewy and bouncy.", "zh": "弹牙有嚼劲。", "zh-Hant": "彈牙有嚼勁。" }
+    },
+    {
+      "id": "seseri", "category": "kushi", "price": 250, "photo": null,
+      "name": { "ja": "せせり", "ko": "닭목살 꼬치", "en": "Chicken neck skewer", "zh": "鸡颈肉串", "zh-Hant": "雞頸肉串" },
+      "desc": { "ja": "ぷりぷりジューシー。", "ko": "탱글탱글하고 육즙이 많아요.", "en": "Plump and juicy.", "zh": "Q弹多汁。", "zh-Hant": "Q彈多汁。" }
+    },
+    {
+      "id": "sasami", "category": "kushi", "price": 250, "photo": null,
+      "name": { "ja": "ささみ", "ko": "닭가슴 안심 꼬치", "en": "Chicken tenderloin skewer", "zh": "鸡柳串", "zh-Hant": "雞柳串" },
+      "desc": { "ja": "レア焼きでふわふわ。", "ko": "살짝만 구워 부드러워요.", "en": "Grilled rare, soft and tender.", "zh": "半熟烤制，软嫩。", "zh-Hant": "半熟烤製，軟嫩。" }
+    },
+    {
+      "id": "sunazuri", "category": "kushi", "price": 280, "photo": null,
+      "name": { "ja": "砂ずり", "ko": "닭모래집 꼬치", "en": "Chicken gizzard skewer", "zh": "鸡胗串", "zh-Hant": "雞胗串" },
+      "desc": { "ja": "丸っこくて大粒!!", "ko": "동글동글하고 큼직해요!!", "en": "Round and big!!", "zh": "圆滚滚的大颗!!", "zh-Hant": "圓滾滾的大顆!!" }
+    },
+    {
+      "id": "tebasaki", "category": "kushi", "price": 300, "photo": null,
+      "name": { "ja": "手羽先", "ko": "닭날개 꼬치", "en": "Chicken wing skewer", "zh": "鸡翅串", "zh-Hant": "雞翅串" },
+      "desc": { "ja": "骨なしだよ〜安心♪", "ko": "뼈가 없어서 먹기 편해요♪", "en": "Boneless, easy to eat♪", "zh": "去骨的，放心吃♪", "zh-Hant": "去骨的，放心吃♪" }
+    },
+    {
+      "id": "tsukune", "category": "kushi", "price": 350, "photo": null,
+      "name": { "ja": "つくね", "ko": "닭고기 완자 꼬치 (츠쿠네)", "en": "Chicken meatball skewer (tsukune)", "zh": "鸡肉丸串", "zh-Hant": "雞肉丸串" },
+      "desc": {
+        "ja": "高坂地鶏のつくね。焼き時間すこ〜し頂きます",
+        "ko": "고사카 토종닭 완자예요. 굽는 데 시간이 조금 걸려요",
+        "en": "Kosaka jidori meatball. Takes a little time to grill",
+        "zh": "高坂土鸡肉丸。烤制需要稍等片刻", "zh-Hant": "高坂土雞肉丸。燒烤需要稍等片刻"
+      }
+    },
+    {
+      "id": "oden-all", "category": "oden", "price": 680, "photo": null,
+      "name": { "ja": "おでん全部盛り", "ko": "오뎅 모둠 (전부)", "en": "Oden, all items", "zh": "关东煮全拼", "zh-Hant": "關東煮全拼" }
+    },
+    {
+      "id": "oden-daikon", "category": "oden", "price": 200, "photo": null,
+      "name": { "ja": "朝倉 大根", "ko": "아사쿠라 무", "en": "Daikon radish (Asakura)", "zh": "朝仓 白萝卜", "zh-Hant": "朝倉 白蘿蔔" }
+    },
+    {
+      "id": "potesala", "category": "yasai", "price": 500, "photo": null,
+      "name": { "ja": "たまりマスタードと無添加チーズのポテトサラダ", "ko": "타마리 머스터드와 무첨가 치즈 감자샐러드", "en": "Potato salad with tamari mustard and additive-free cheese", "zh": "溜酱油芥末与无添加奶酪土豆沙拉", "zh-Hant": "溜醬油芥末與無添加起司馬鈴薯沙拉" }
+    },
+    {
+      "id": "piman", "category": "yasai", "price": 400, "photo": null,
+      "name": { "ja": "熊本 ワンダーピーマン あけがらしポン酢", "ko": "구마모토 원더 피망, 아케가라시 폰즈", "en": "Kumamoto Wonder green peppers with akegarashi ponzu", "zh": "熊本神奇青椒 配辣味柚子醋", "zh-Hant": "熊本神奇青椒 佐辣味柚子醋" }
+    },
+    {
+      "id": "kyuri", "category": "yasai", "price": 400, "photo": null,
+      "name": { "ja": "朝倉 きゅうりのからし漬け", "ko": "아사쿠라 오이 겨자절임", "en": "Asakura cucumber pickled with mustard", "zh": "朝仓 芥末腌黄瓜", "zh-Hant": "朝倉 芥末醃小黃瓜" }
+    },
+    {
+      "id": "tomato", "category": "yasai", "price": 500, "photo": null,
+      "name": { "ja": "大分 フルーツトマト", "ko": "오이타 프루트 토마토", "en": "Oita fruit tomato", "zh": "大分 水果番茄", "zh-Hant": "大分 水果番茄" }
+    },
+    {
+      "id": "sashimi", "category": "sakana", "price": 1580, "photo": null,
+      "name": { "ja": "刺身盛合せ（1人前）", "ko": "닭 회 모둠 (1인분)", "en": "Chicken sashimi platter (1 serving)", "zh": "鸡肉刺身拼盘（1人份）", "zh-Hant": "雞肉生魚片拼盤（1人份）" },
+      "desc": {
+        "ja": "高坂鶏（兵庫県丹波篠山産）。生ものですので、体調の悪い方はお控えください",
+        "ko": "고사카 닭 (효고현 단바사사야마산). 날것이라 몸이 안 좋으신 분은 피해 주세요",
+        "en": "Kosaka chicken from Tamba-Sasayama, Hyogo. Served raw, so please avoid it if you feel unwell",
+        "zh": "高坂鸡（兵库县丹波篠山产）。为生食，身体不适者请勿食用", "zh-Hant": "高坂雞（兵庫縣丹波篠山產）。為生食，身體不適者請勿食用"
+      }
+    },
+    {
+      "id": "motsuni", "category": "sakana", "price": 780, "photo": null,
+      "name": { "ja": "鶏モツ煮込み", "ko": "닭 내장 조림", "en": "Simmered chicken giblets", "zh": "炖鸡杂", "zh-Hant": "燉雞雜" }
+    },
+    {
+      "id": "kimoni", "category": "sakana", "price": 400, "photo": null,
+      "name": { "ja": "鶏肝煮", "ko": "닭간 조림", "en": "Simmered chicken liver", "zh": "炖鸡肝", "zh-Hant": "燉雞肝" }
+    },
+    {
+      "id": "kawasu", "category": "sakana", "price": 480, "photo": null,
+      "name": { "ja": "地鶏の炙り皮酢", "ko": "토종닭 껍질 불맛 초무침", "en": "Seared jidori chicken skin in vinegar", "zh": "炙烤土鸡皮拌醋", "zh-Hant": "炙烤土雞皮拌醋" }
+    },
+    {
+      "id": "kinuage", "category": "age", "price": 450, "photo": null,
+      "name": { "ja": "絹揚げ豆富", "ko": "튀긴 연두부", "en": "Fried silken tofu", "zh": "炸嫩豆腐", "zh-Hant": "炸嫩豆腐" },
+      "desc": { "ja": "外はカリッ、中はトローん。", "ko": "겉은 바삭, 속은 부드러워요.", "en": "Crisp outside, silky inside.", "zh": "外酥内嫩。", "zh-Hant": "外酥內嫩。" }
+    },
+    {
+      "id": "suna-karaage", "category": "age", "price": 650, "photo": null,
+      "name": { "ja": "地鶏の砂ずり唐揚げ", "ko": "토종닭 모래집 튀김", "en": "Fried jidori gizzard", "zh": "炸土鸡胗", "zh-Hant": "炸土雞胗" }
+    },
+    {
+      "id": "tebasaki-karaage", "category": "age", "price": 680, "photo": null,
+      "name": { "ja": "手羽先唐揚げ（4個）", "ko": "닭날개 튀김 (4개)", "en": "Fried chicken wings (4 pcs)", "zh": "炸鸡翅（4个）", "zh-Hant": "炸雞翅（4個）" }
+    },
+    {
+      "id": "kashiwameshi", "category": "shime", "price": 450, "photo": null,
+      "name": { "ja": "かしわ飯", "ko": "닭고기 영양밥 (카시와메시)", "en": "Chicken rice (kashiwa meshi)", "zh": "鸡肉饭", "zh-Hant": "雞肉飯" },
+      "desc": { "ja": "土鍋仕込み。〆にモッテコイ。", "ko": "뚝배기로 지어요. 마무리로 딱이에요.", "en": "Cooked in a clay pot. Perfect to finish your meal.", "zh": "砂锅制作，最适合收尾。", "zh-Hant": "砂鍋製作，最適合收尾。" }
+    },
+    {
+      "id": "ramen", "category": "shime", "price": 680, "photo": null,
+      "name": { "ja": "高坂鶏の醤油ラーメン", "ko": "고사카 닭 간장 라멘", "en": "Kosaka chicken soy sauce ramen", "zh": "高坂鸡酱油拉面", "zh-Hant": "高坂雞醬油拉麵" },
+      "desc": {
+        "ja": "無添加スープが身に染みる。北海道小麦（春よ恋・きたほなみ）使用。",
+        "ko": "무첨가 수프가 몸에 스며들어요. 홋카이도 밀 (하루요코이·기타호나미) 사용.",
+        "en": "Additive-free broth that warms you up. Noodles from Hokkaido wheat (Haruyokoi, Kitahonami).",
+        "zh": "无添加汤头沁入身心。使用北海道小麦（春よ恋・きたほなみ）。", "zh-Hant": "無添加湯頭沁入身心。使用北海道小麥（春よ恋・きたほなみ）。"
+      }
+    },
+    {
+      "id": "akadashi", "category": "shime", "price": 480, "photo": null,
+      "name": { "ja": "高坂鶏の赤だし（なめこ・南関あげ入）", "ko": "고사카 닭 붉은 된장국 (나메코 버섯·난칸 유부)", "en": "Kosaka chicken red miso soup (nameko mushrooms, Nankan fried tofu)", "zh": "高坂鸡红味噌汤（滑子菇・南关油豆腐）", "zh-Hant": "高坂雞紅味噌湯（滑子菇・南關油豆腐）" }
+    },
+    {
+      "id": "monaka", "category": "dessert", "price": 400, "photo": null,
+      "name": { "ja": "干し柿バター最中（1ヶ）", "ko": "곶감 버터 모나카 (1개)", "en": "Dried persimmon and butter monaka wafer (1 pc)", "zh": "柿饼黄油最中（1个）", "zh-Hant": "柿餅奶油最中（1個）" },
+      "desc": { "ja": "フルヤ特製", "ko": "후루야 특제", "en": "Furuya's own", "zh": "Furuya特制", "zh-Hant": "Furuya特製" }
+    },
+    {
+      "id": "pudding", "category": "dessert", "price": 450, "photo": null,
+      "name": { "ja": "ほうじ茶ミルクプリン", "ko": "호지차 우유 푸딩", "en": "Hojicha (roasted green tea) milk pudding", "zh": "焙茶牛奶布丁", "zh-Hant": "焙茶牛奶布丁" }
+    }
+  ]
+}
